@@ -1,0 +1,63 @@
+set STOP FLG: True CONNECT BAUD: 115200
+com port closedset state: ESP_DL_SYNC
+serial port opened
+-----------
+baud:115200
+root baud:115200
+-------------
+===============BAUD : 115200===============CALL DEVICE SYNC
+connecting...
+chip sync ok
+mac l: 0x1283e648L
+mac h: 0x2fa4cf
+crc_cal: 47
+crc_read: 47
+crc_test: 0
+ESP32 MAC CRC OK
+get mac res: 1
+get flash id : 0x00ffffffmanufacturer_id: 0xff
+device_id: 0xffff
+SET FLASH PARAMS
+com closed
+set STOP FLG: True CONNECT BAUD: 115200
+com port closedset state: ESP_DL_SYNC
+serial port opened
+-----------
+baud:115200
+root baud:115200
+-------------
+===============BAUD : 115200===============CALL DEVICE SYNC
+connecting...
+chip sync ok
+mac l: 0x1283e648L
+mac h: 0x2fa4cf
+crc_cal: 47
+crc_read: 47
+crc_test: 0
+ESP32 MAC CRC OK
+get mac res: 1
+get flash id : 0x00ffffffmanufacturer_id: 0xff
+device_id: 0xffff
+SET FLASH PARAMS
+com closed
+set STOP FLG: True CONNECT BAUD: 115200
+com port closedset state: ESP_DL_SYNC
+serial port opened
+-----------
+baud:115200
+root baud:115200
+-------------
+===============BAUD : 115200===============CALL DEVICE SYNC
+connecting...
+chip sync ok
+mac l: 0x1283e648L
+mac h: 0x2fa4cf
+crc_cal: 47
+crc_read: 47
+crc_test: 0
+ESP32 MAC CRC OK
+get mac res: 1
+get flash id : 0x00ffffffmanufacturer_id: 0xff
+device_id: 0xffff
+SET FLASH PARAMS
+com closed

@@ -1,0 +1,24 @@
+
+Komunikasi:
+--------Login ---------
+hardware = login satpam /absen -> {"idsmartcard":"id"}.
+database = data satpam -> {"absen","namasatpam", "NIPsatpam"}.
+--------tracking-------
+hardware = {"NIPsatpam" : "134463746"}.
+database = {"lokasi"}
+hardware = {"idruangan", "Status"}.
+database = {"lokasi"}
+.
+.
+hardware = {"idruangan", "Status"}.
+database = {"selesai"}.
+hardware = {"summary", "NIPsatpam" : ""}.
+database = {data1, data2, data3 - datan} >> data ====> {["Lokasi": "", "Status" : "" , "Waktu" : "" ],[],}
+
+------Daftar ruangan----
+hardware = {"daftar"}.
+database = {data1, data2, data3 - datan} >> data ====> {["Lokasi": "", "Status" : "" , "Waktu" : "" ],[],}
+
+
+
+

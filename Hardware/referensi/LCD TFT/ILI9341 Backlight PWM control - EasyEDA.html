@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://easyeda.com/Kenjutsu/ILI9341_Backlight_PWM_control-6H31LveAW -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> ILI9341 Backlight PWM control -
+    EasyEDA </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="ILI9341 Backlight PWM control, Circuit PCB">
+  
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="Pv59vW2PuSoVLMP01QlszXWuJVxBBi5M4unfRYlT">
+
+  <!--  -->
+  <!-- Google Tag Manager for EasyEDA -->
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W532SD9');</script> -->
+  <!-- End Google Tag Manager for EasyEDA -->
+  <!--  -->
+
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="./ILI9341 Backlight PWM control - EasyEDA_files/vendor.css">
+      <link rel="stylesheet" type="text/css" href="./ILI9341 Backlight PWM control - EasyEDA_files/home-project-detail.css">
+  <script>
+  if (top !== self) {
+    top.location.href = location.href;
+  }
+  </script>
+</head>
+
+<body>
+  <!-- -->
+  <!-- Google Tag Manager (noscript) for EasyEDA -->
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W532SD9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+  <!-- End Google Tag Manager (noscript) for EasyEDA -->
+  <!-- -->
+    <div style="width:0; height:0; visibility:hidden;">
+    <img src="./ILI9341 Backlight PWM control - EasyEDA_files/easyeda-thumbnail.png" alt="" style="width:100px; height:100px">
+  </div>
+    <div class="push-body">
+    <div class="overlay" style="display: none;"></div>
+    <div class="upper-body" data-stellar-background-ratio="0.8">
+      <div id="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-9 col-md-10 header-menu-wrapper">
+        <div class="header-menu">
+          <svg aria-hidden="true">
+            <use xlink:href="#svg-more"></use>
+          </svg>
+        </div>
+        <div class="logo">
+          <a href="https://easyeda.com/">
+                        <div class="logo-img middle-hidden"></div>
+                      </a>
+        </div>
+        <ul class="nav clearfix" id="headerNav">
+          <li class="has-sub-nav">
+            <a href="https://easyeda.com/explore" data-active="0" class=" active "><span>Products</span><em></em>
+              <i class="icon-narrow hidden-lg hidden-md"></i>
+            </a>
+            <div class="phone-sub-nav hidden-md hidden-lg">
+            <a href="https://easyeda.com/editor">Online Editor</a><a href="https://easyeda.com/page/download"> Desktop Client</a></div>
+          </li>
+          <li>
+            <a href="https://easyeda.com/page/pricing" class=""><span>Pricing</span>
+              <i class="icon-narrow hidden-lg hidden-md"></i>
+            </a>
+          </li>
+          <li class="has-sub-nav">
+            <a href="javascript:void(0);" data-active="1" class=""><span>Services</span><em></em>
+              <i class="icon-narrow hidden-lg hidden-md"></i>
+            </a>
+            <div class="phone-sub-nav hidden-md hidden-lg">
+            <a href="https://lcsc.com/?href=easyeda-header&amp;source=easyeda"> Parts Order - LCSC</a><a href="https://jlcpcb.com/?href=easyeda-home"> PCB Order - JLCPCB</a></div>
+          </li>
+                    
+          <li>
+            <a href="https://oshwlab.com/" target="_blank">
+              Explore            </a>
+          </li>
+          <li class="has-sub-nav">
+            <a href="javascript:void(0);" arget="_blank" data-active="3" class=""><span>Help</span><em></em>
+              <i class="icon-narrow hidden-lg hidden-md"></i>
+            </a>
+            <div class="phone-sub-nav hidden-md hidden-lg">
+            <a href="https://easyeda.com/explore">Explore</a><a href="https://easyeda.com/components?docType=schematic">SchematicLibs</a><a href="https://easyeda.com/components?docType=package">PCBLibs</a><a href="https://easyeda.com/modules?docType=schematic">SchematicModules</a><a href="https://easyeda.com/modules?docType=pcb">PCBModules</a></div>
+          </li>
+          <li class="editor-into"><a href="https://easyeda.com/editor" class="header-editor-btn">EasyEDA Designer</a>
+          </li>
+                  </ul>
+      </div>
+      <div class="col-xs-3 col-md-2 login-wrapper">
+        <div class="nav-search right hidden-xs hidden-sm">
+          <a href="javascript:;" class="personal-search">
+          </a>
+        </div>
+        <div>
+                    <div href="javascript:;" class="right  lang-change hidden-xs hidden-sm">
+            <i></i>
+            <em></em>
+            <div class="lang-down no-wrap" style="display: none">
+              <dl>
+                <dd><a href="https://easyeda.com/en"><span class="flags lang-us"></span>English</a></dd>
+                <dd><a href="https://lceda.cn/"><span class="flags lang-cn"></span>中文(简体)</a></dd>
+                <dd class="nav-none"><a href="https://easyeda.com/fr"><span class="flags lang-fr"></span>français</a></dd>
+                <dd class="nav-none"><a href="https://easyeda.com/pt"><span class="flags lang-pt"></span>português</a></dd>
+                <dd class="nav-none"><a href="https://easyeda.com/es"><span class="flags lang-es"></span>español</a></dd>
+                <dd class="nav-none"><a href="https://easyeda.com/th"><span class="flags lang-th"></span>ไทย</a></dd>
+                <dd class="nav-none"><a href="https://easyeda.com/ar"><span class="flags lang-ar"></span>العربية</a></dd>
+                <dd class="nav-none"><a href="https://easyeda.com/nl"><span class="flags lang-nl"></span>Nederlands</a></dd>
+                <dd class="nav-none"><a href="https://easyeda.com/cz"><span class="flags lang-cz"></span>Czech</a></dd>
+              </dl>
+              <dl class="nav-none">
+                <dd><a href="https://easyeda.com/iw"><span class="flags lang-iw"></span>עברית</a></dd>
+                <dd><a href="https://easyeda.com/vn"><span class="flags lang-vn"></span>tiếng việt</a></dd>
+                <dd><a href="https://easyeda.com/ru"><span class="flags lang-ru"></span>русский</a></dd>
+                <dd><a href="https://easyeda.com/it"><span class="flags lang-it"></span>italiano</a></dd>
+                <dd><a href="https://easyeda.com/pl"><span class="flags lang-pl"></span>polski</a></dd>
+                <dd><a href="https://easyeda.com/af"><span class="flags lang-af"></span>Afrikaans</a></dd>
+                <dd><a href="https://easyeda.com/fa"><span class="flags lang-fa"></span>فارسی</a></dd>
+                <dd><a href="https://easyeda.com/de"><span class="flags lang-de"></span>Deutsch</a></dd>
+              </dl>
+            </div>
+          </div>
+                  </div>
+                <div class="login-info">
+          <a href="https://easyeda.com/login" class="right login hidden-xs hidden-sm">Login</a>
+          <span class="right login hidden-xs hidden-sm">|</span>
+          <a href="https://easyeda.com/register" class="right login hidden-xs hidden-sm">Register</a>
+          <a href="https://easyeda.com/login" class="right  hidden-md hidden-lg">
+            <div class="phone-login">
+              <span></span>
+            </div>
+          </a>
+        </div>
+              </div>
+            <div class="right hidden-xs hidden-sm search-down">
+        <input type="text" placeholder="Search for Projects ,Tutorial or Topic" class="txt-search col-md-11" name="wd">
+        <button type="button" class="btn-search"></button>
+        <span class="col-md-1">
+          <img src="./ILI9341 Backlight PWM control - EasyEDA_files/input-black-close.png">
+        </span>
+      </div>
+          </div>
+  </div>
+
+</div>
+
+<div class="clear"></div>
+<div class="header-nav-hover hidden-xs hidden-sm" style="height: 0px;">
+  <div class="sub-nav" style="display: none;">
+    <a href="https://easyeda.com/editor">Online Editor</a>
+    <a href="https://easyeda.com/page/download"> Desktop Client</a>
+      </div>
+  <div class="sub-nav" style="display: none; margin-left: 490.297px;">
+        <a href="https://lcsc.com/?href=easyeda-header&amp;source=easyeda"> Parts Order - LCSC</a>
+    <a href="https://jlcpcb.com/?href=easyeda-home"> PCB Order - JLCPCB</a>
+      </div>
+
+  <div class="sub-nav" style="display: none;">
+        <a href="https://easyeda.com/explore">Explore</a>
+        <a href="https://easyeda.com/components?docType=schematic">SchematicLibs</a>
+    <a href="https://easyeda.com/components?docType=package">PCBLibs</a>
+    <a href="https://easyeda.com/modules?docType=schematic">SchematicModules</a>
+    <a href="https://easyeda.com/modules?docType=pcb">PCBModules</a>
+  </div>
+
+    <div class="sub-nav" style="display: none;">
+    <a href="https://easyeda.com/forum">Forum</a>
+    <a href="https://docs.easyeda.com/en/FAQ/Editor/index.html">Tutorial</a>
+    <a href="https://easyeda.com/page/update-record">Update Notice</a>
+    <a href="https://docs.easyeda.com/en/FAQ/Contact-Us/index.html">Contact Us</a>
+  </div>
+  </div>    <div class="modal-overlay" style="display: none;"></div>
+    <div class="project-wrap" id="scroll-selected">
+        <div class="breadcrumb ">
+            <div class="container">
+                <a href="https://easyeda.com/">Home</a>&gt;<a href="https://easyeda.com/explore">Explore</a>&gt;<span>ILI9341 Backlight PWM control</span>
+            </div>
+        </div>
+
+        <div class="container content-fluid">
+            <div class="project-detail">
+                <div class="project-detail-left">
+                                            <div class="user-info">
+    <a href="https://easyeda.com/Kenjutsu"> <img src="./ILI9341 Backlight PWM control - EasyEDA_files/avatar-default.png" alt="" class="photo" onerror="this.onerror=null; this.src=&#39;/images/avatar-default.png&#39;;">
+    </a>
+    <h4 class="author-name" title="Kenjutsu" id="username" data-id="56d2c0f489ab47c28751f8a9d0f91294"><a href="https://easyeda.com/Kenjutsu">Kenjutsu</a></h4>
+            <div class="user-contact">
+            <button class="user-contact-btn btn-user-follow
+            " id="btnFollowAutor" data-id="56d2c0f489ab47c28751f8a9d0f91294">
+                <span>
+                                            Follow                                    </span>
+            </button>
+            <button class="user-contact-btn btn-letter"><span>Message</span></button>
+        </div>
+        <div class="user-project-count">
+        <i class="icon-base icon-project"></i>
+        <span class="mr15">Public Projects：1</span>
+        <i class="icon-base icon-create-component"></i>
+        <span>Libraries：0</span>
+    </div>
+</div>
+
+<div class="version">
+    <h5 class="title">License</h5>
+    <p></p>
+</div>
+    <div class="tags">
+        <h5 class="title">Tags</h5>
+            </div>
+                                                                <span class="project-detail-left-spanText">Recommend Projects</span>
+                        <div class="container-item">
+                                                            <div class="project-detail-left-recommend-item">
+                                    <a href="https://easyeda.com/vicyda/Potar-pane">
+                                        <div class="img-box"><img src="./ILI9341 Backlight PWM control - EasyEDA_files/7cba315aff0349caaab6287d6c337339.png" alt="" onerror="this.onerror=null; this.src=&#39;/images/components-default.png&#39;;"></div>
+                                        <div class="item-title" title="Potar pane FINAL">Potar pane FINAL</div>
+                                    </a>
+                                </div>
+                                                            <div class="project-detail-left-recommend-item">
+                                    <a href="https://easyeda.com/tmanabc123/rf-projects">
+                                        <div class="img-box"><img src="./ILI9341 Backlight PWM control - EasyEDA_files/bddd3e51b3f64c889ba3c13d7b82d9ea.png" alt="" onerror="this.onerror=null; this.src=&#39;/images/components-default.png&#39;;"></div>
+                                        <div class="item-title" title="RF projects">RF projects</div>
+                                    </a>
+                                </div>
+                                                            <div class="project-detail-left-recommend-item">
+                                    <a href="https://easyeda.com/pangoro24/esp32-bare-minimum">
+                                        <div class="img-box"><img src="./ILI9341 Backlight PWM control - EasyEDA_files/thumb-default.png" alt="" onerror="this.onerror=null; this.src=&#39;/images/components-default.png&#39;;"></div>
+                                        <div class="item-title" title="esp32 bare minimum">esp32 bare minimum</div>
+                                    </a>
+                                </div>
+                                                            <div class="project-detail-left-recommend-item">
+                                    <a href="https://easyeda.com/reflow/reflow-micro-table">
+                                        <div class="img-box"><img src="./ILI9341 Backlight PWM control - EasyEDA_files/saS3e0nfiSuul8QZ1AXuZmjsfMuDzQwUppYcmNq0.jpeg" alt="" onerror="this.onerror=null; this.src=&#39;/images/components-default.png&#39;;"></div>
+                                        <div class="item-title" title="Reflow Micro Table">Reflow Micro Table</div>
+                                    </a>
+                                </div>
+                                                   </div> 
+                                    </div>
+                <div class="project-detail-right">
+                    <h1 class="title">ILI9341 Backlight PWM control</h1>
+                    <div class="author-show-info">
+                        <span class="mr21">5 years ago</span>
+                        <a href="javascript:void(0)" title="View">
+                            <i class="icon icon-view"></i>
+                            <span>1722</span>
+                        </a>
+
+                        <button title="Favorite" data-id="8e4eb43eb6d448828cb5a43a1db512e7" class="btn-project-collect btn-icon-like  ">
+                            <i class="icon icon-collect"></i>
+                            <span>2</span>
+                        </button>
+                        <button class="btn-project-fork btn-icon-like" data-id="8e4eb43eb6d448828cb5a43a1db512e7" title="Clone">
+                            <i class="icon icon-share"></i>
+                            <span>3</span>
+                        </button>
+                    </div>
+                    <div class="project-detail-tabs">
+                        <ul>
+                            <li class="active">Description</li>
+                            <li>Documents</li>
+                            <li>BOM</li>
+                            <li>Attachments</li>
+                            <li>Members</li>
+                            <li>Comments</li>
+                        </ul>
+                    </div>
+                    <div class="project-content-wrapper">
+                        
+                        <div class="pdt-content">
+                            <h2>Description</h2>
+                                                        <div class="output-markdown-contents tui-editor-contents">
+                                
+                            </div>
+                                                    </div>
+                        
+                        <div class="pdt-content">
+                          <h2>Documents</h2>
+                            <div class="open-in-editor">
+                              <button class="btn btn-info" onclick="window.open(&#39;/editor#id=7aead3a82bb74ac1a6439cb20ee5a27e|&#39;)">Open in Editor</button>
+                            </div>
+                                                            <div class="doc-wrapper">
+                                                                                                                    <div class="doc-btn-wrapper">
+                                            <h2>ILI9341 Backlight PWM control</h2>
+                                            
+                                            <button class="btn btn-info" onclick="window.open(&#39;/editor#id=7aead3a82bb74ac1a6439cb20ee5a27e&#39;)">Open in Editor</button>
+                                        </div>
+                                        <div class="doc-img-wrapper ">
+                                                                                            <img src="./ILI9341 Backlight PWM control - EasyEDA_files/3790cd7518934c26bf6a0ba50da6d769.png" alt="">
+                                                                                    </div>
+                                                                                                            </div>
+                                                        <div class="open-in-editor">
+                                <button class="btn btn-info" onclick="window.open(&#39;/editor#id=7aead3a82bb74ac1a6439cb20ee5a27e|&#39;)">Open in Editor</button>
+                            </div>
+                        </div>
+                        
+                        <div class="pdt-content bom-content">
+                            <template class="bom-json"></template>
+                            <h2>BOM</h2>
+                            <div class="table-box table-responsive">
+                                <table class="table">
+                                                                            
+                                                                                            <tbody><tr>
+                                                                                                            <th class="bom-chart" width="50px">ID</th>
+                                                                                                            <th class="bom-chart">Name</th>
+                                                                                                            <th class="bom-chart">Designator</th>
+                                                                                                            <th class="bom-chart">Footprint</th>
+                                                                                                            <th class="bom-chart">Quantity</th>
+                                                                                                    </tr>
+                                                                                    
+                                                                                            <tr>
+                                                                                                            <td>1</td>
+                                                                                                            <td>1k</td>
+                                                                                                            <td>R1</td>
+                                                                                                            <td>R3</td>
+                                                                                                            <td>1</td>
+                                                                                                    </tr>
+                                                                                    
+                                                                                            <tr>
+                                                                                                            <td>2</td>
+                                                                                                            <td>10k</td>
+                                                                                                            <td>R2</td>
+                                                                                                            <td>R3</td>
+                                                                                                            <td>1</td>
+                                                                                                    </tr>
+                                                                                    
+                                                                                            <tr>
+                                                                                                            <td>3</td>
+                                                                                                            <td>2N3906</td>
+                                                                                                            <td>Q1</td>
+                                                                                                            <td>SOT23</td>
+                                                                                                            <td>1</td>
+                                                                                                    </tr>
+                                                                                    
+                                                                                            <tr>
+                                                                                                            <td>4</td>
+                                                                                                            <td>SIP1</td>
+                                                                                                            <td>ILI9341 LED PIN,STM32 PWM PIN</td>
+                                                                                                            <td>HDR1X1</td>
+                                                                                                            <td>2</td>
+                                                                                                    </tr>
+                                                                                                                                                        </tbody></table>
+                            </div>
+                                                            <div class="bom-btns">
+                                  <button class="btn btn-success-light bom-btns-download" onclick="window.open(&#39;https://easyeda.com/projects/8e4eb43eb6d448828cb5a43a1db512e7/download_boms&#39;)">Download BOM</button>
+                                  <button class="btn btn-success bom-btns-order" onclick="window.open(&#39;https://easyeda.com/projects/8e4eb43eb6d448828cb5a43a1db512e7/order_at_lcsc&#39;)">Order at LCSC</button>
+                                </div>
+                                                    </div>
+
+                        <div class="pdt-content">
+                            <h2>Attachments</h2>
+                                                            None                                                    </div>
+
+                        <div class="pdt-content">
+                            <h2>Members</h2>
+                                                            <div class="team">
+                                    <a href="https://easyeda.com/Kenjutsu">
+                                        <img src="./ILI9341 Backlight PWM control - EasyEDA_files/avatar-default.png" alt="" class="author-photo" onerror="this.onerror=null; this.src=&#39;https://easyeda.com/images/avatar-default.png?id=f119c61e3d5ce714b4b8&#39;;">
+                                        <span class="author-name-small" title="Kenjutsu">Kenjutsu</span>
+                                    </a>
+                                </div>
+                                                        <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="comment-container" data-allow-comment="true">
+        <div class="container content-fluid">
+            <div class="pdt-content">
+                <div class="md-editor-wrapper">
+                    <div id="md-editor" style="box-sizing: border-box; height: 300px;"><div class="tui-editor-defaultUI">
+        <div class="te-toolbar-section"><div class="te-markdown-tab-section" style="display: none;"><div class="te-tab"><button type="button" data-index="0" class="te-tab-active">Write</button><button type="button" data-index="1">Preview</button></div></div><div class="tui-editor-defaultUI-toolbar"><button class="tui-heading tui-toolbar-icons" type="button"></button><button class="tui-bold tui-toolbar-icons" type="button"></button><button class="tui-italic tui-toolbar-icons" type="button"></button><button class="tui-strike tui-toolbar-icons" type="button"></button><div class="tui-toolbar-divider"></div><button class="tui-hrline tui-toolbar-icons" type="button"></button><button class="tui-quote tui-toolbar-icons" type="button"></button><div class="tui-toolbar-divider"></div><button class="tui-ul tui-toolbar-icons" type="button"></button><button class="tui-ol tui-toolbar-icons" type="button"></button><button class="tui-task tui-toolbar-icons" type="button"></button><button class="tui-indent tui-toolbar-icons" type="button"></button><button class="tui-outdent tui-toolbar-icons" type="button"></button><div class="tui-toolbar-divider"></div><button class="tui-table tui-toolbar-icons" type="button"></button><button class="tui-image tui-toolbar-icons" type="button"></button><button class="tui-link tui-toolbar-icons" type="button"></button><div class="tui-toolbar-divider"></div><button class="tui-code tui-toolbar-icons" type="button"></button><button class="tui-codeblock tui-toolbar-icons" type="button"></button><div class="tui-popup-wrapper te-dropdown-toolbar" style="display: none;">
+    <div class="tui-popup-body"><div class="tui-editor-defaultUI-toolbar"></div></div></div></div></div>
+        <div class="te-editor-section"><div class="tui-editor te-ww-mode"><div class="te-md-container te-preview-style-vertical"><div class="te-editor te-tab-active"><textarea style="display: none;"></textarea><div class="CodeMirror cm-s-default CodeMirror-wrap" style="min-height: 245px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px;"></div><div class="CodeMirror-gutters" style="display: none;"></div></div></div></div><div class="te-md-splitter"></div><div class="te-preview" style="min-height: 245px;"><div class="tui-editor-contents"></div></div></div><div class="te-ww-container"><div class="te-editor" style="position: relative;"><div contenteditable="true" class="tui-editor-contents" style="min-height: 245px;"><div><br></div></div><div class="te-ww-block-overlay code-block-header" style="position: absolute; display: none; z-index: 1;"><span>text</span><button type="button">Editor</button></div></div></div></div></div>
+        <div class="te-mode-switch-section" style="display: block;"><div class="te-mode-switch"><button class="te-switch-button markdown" type="button">Markdown</button><button class="te-switch-button wysiwyg active" type="button">WYSIWYG</button></div></div>
+    <div class="tui-popup-wrapper te-popup-add-link tui-editor-popup" style="display: none;"><div class="tui-popup-header">
+        <span class="tui-popup-title">Insert link</span>
+        <div class="tui-popup-header-buttons">
+            <button type="button" class="tui-popup-close-button"></button>
+        </div>
+    </div>
+    <div class="tui-popup-body"><label for="linkText">Link text</label>
+            <input type="text" class="te-link-text-input">
+            <label for="url">URL</label>
+            <input type="text" class="te-url-input">
+            <div class="te-button-section">
+                <button type="button" class="te-ok-button btn submit-btn">OK</button>
+                <button type="button" class="te-close-button btn btn-default">Cancel</button>
+            </div></div></div><div class="tui-popup-wrapper te-popup-add-image tui-editor-popup" style="display: none;"><div class="tui-popup-header">
+        <span class="tui-popup-title">Insert image</span>
+        <div class="tui-popup-header-buttons">
+            <button type="button" class="tui-popup-close-button"></button>
+        </div>
+    </div>
+    <div class="tui-popup-body"><div class="te-tab-section"><div class="te-tab"><button type="button" data-index="0" class="te-tab-active">File</button><button type="button" data-index="1">URL</button></div></div>
+            <div class="te-url-type">
+                <label for="">Image URL</label>
+                <input type="text" class="te-image-url-input">
+            </div>
+            <form enctype="multipart/form-data" class="te-file-type te-tab-active">
+                <label for="">Select image file</label>
+                <input type="file" class="te-image-file-input" accept="image/*">
+            </form>
+            <label for="url">Description</label>
+            <input type="text" class="te-alt-text-input">
+            <div class="te-button-section">
+                <button type="button" class="te-ok-button btn submit-btn">OK</button>
+                <button type="button" class="te-close-button btn btn-default">Cancel</button>
+            </div></div></div><div class="tui-popup-wrapper te-popup-add-table" style="display: none; position: fixed; width: 181px;">
+    <div class="tui-popup-body"><div class="te-table-selection">
+        <div class="te-table-header" style="height: 17px; width: 151px;"></div>
+        <div class="te-table-body" style="height: 120px; width: 151px;"></div>
+        <div class="te-selection-area"></div>
+    </div>
+    <p class="te-description"></p></div></div><div class="tui-popup-wrapper te-heading-add" style="display: none; position: fixed;">
+    <div class="tui-popup-body"><ul>
+                <li data-value="1" data-type="Heading"><h1>Heading 1</h1></li>
+                <li data-value="2" data-type="Heading"><h2>Heading 2</h2></li>
+                <li data-value="3" data-type="Heading"><h3>Heading 3</h3></li>
+                <li data-value="4" data-type="Heading"><h4>Heading 4</h4></li>
+                <li data-value="5" data-type="Heading"><h5>Heading 5</h5></li>
+                <li data-value="6" data-type="Heading"><h6>Heading 6</h6></li>
+                <li data-type="Paragraph"><div>Paragraph</div></li>
+            </ul></div></div><div class="tui-popup-wrapper te-popup-table-utils" style="display: none;">
+    <div class="tui-popup-body"><button type="button" class="te-table-add-row">Add row</button>
+            <button type="button" class="te-table-add-col">Add col</button>
+            <button type="button" class="te-table-remove-row">Remove row</button>
+            <button type="button" class="te-table-remove-col">Remove col</button>
+            <hr>
+            <button type="button" class="te-table-col-align-left">Align left</button>
+            <button type="button" class="te-table-col-align-center">Align center</button>
+            <button type="button" class="te-table-col-align-right">Align right</button>
+            <hr>
+            <button type="button" class="te-table-remove">Remove table</button></div></div><div class="tui-popup-wrapper te-popup-code-block-languages" style="display: none; z-index: 10000;">
+    <div class="tui-popup-body"><button type="button" class="te-popup-code-block-lang-1c active" data-lang="1c">1c</button><button type="button" class="te-popup-code-block-lang-abnf" data-lang="abnf">abnf</button><button type="button" class="te-popup-code-block-lang-accesslog" data-lang="accesslog">accesslog</button><button type="button" class="te-popup-code-block-lang-actionscript" data-lang="actionscript">actionscript</button><button type="button" class="te-popup-code-block-lang-ada" data-lang="ada">ada</button><button type="button" class="te-popup-code-block-lang-apache" data-lang="apache">apache</button><button type="button" class="te-popup-code-block-lang-applescript" data-lang="applescript">applescript</button><button type="button" class="te-popup-code-block-lang-cpp" data-lang="cpp">cpp</button><button type="button" class="te-popup-code-block-lang-arduino" data-lang="arduino">arduino</button><button type="button" class="te-popup-code-block-lang-armasm" data-lang="armasm">armasm</button><button type="button" class="te-popup-code-block-lang-xml" data-lang="xml">xml</button><button type="button" class="te-popup-code-block-lang-asciidoc" data-lang="asciidoc">asciidoc</button><button type="button" class="te-popup-code-block-lang-aspectj" data-lang="aspectj">aspectj</button><button type="button" class="te-popup-code-block-lang-autohotkey" data-lang="autohotkey">autohotkey</button><button type="button" class="te-popup-code-block-lang-autoit" data-lang="autoit">autoit</button><button type="button" class="te-popup-code-block-lang-avrasm" data-lang="avrasm">avrasm</button><button type="button" class="te-popup-code-block-lang-awk" data-lang="awk">awk</button><button type="button" class="te-popup-code-block-lang-axapta" data-lang="axapta">axapta</button><button type="button" class="te-popup-code-block-lang-bash" data-lang="bash">bash</button><button type="button" class="te-popup-code-block-lang-basic" data-lang="basic">basic</button><button type="button" class="te-popup-code-block-lang-bnf" data-lang="bnf">bnf</button><button type="button" class="te-popup-code-block-lang-brainfuck" data-lang="brainfuck">brainfuck</button><button type="button" class="te-popup-code-block-lang-cal" data-lang="cal">cal</button><button type="button" class="te-popup-code-block-lang-capnproto" data-lang="capnproto">capnproto</button><button type="button" class="te-popup-code-block-lang-ceylon" data-lang="ceylon">ceylon</button><button type="button" class="te-popup-code-block-lang-clean" data-lang="clean">clean</button><button type="button" class="te-popup-code-block-lang-clojure" data-lang="clojure">clojure</button><button type="button" class="te-popup-code-block-lang-clojure-repl" data-lang="clojure-repl">clojure-repl</button><button type="button" class="te-popup-code-block-lang-cmake" data-lang="cmake">cmake</button><button type="button" class="te-popup-code-block-lang-coffeescript" data-lang="coffeescript">coffeescript</button><button type="button" class="te-popup-code-block-lang-coq" data-lang="coq">coq</button><button type="button" class="te-popup-code-block-lang-cos" data-lang="cos">cos</button><button type="button" class="te-popup-code-block-lang-crmsh" data-lang="crmsh">crmsh</button><button type="button" class="te-popup-code-block-lang-crystal" data-lang="crystal">crystal</button><button type="button" class="te-popup-code-block-lang-cs" data-lang="cs">cs</button><button type="button" class="te-popup-code-block-lang-csp" data-lang="csp">csp</button><button type="button" class="te-popup-code-block-lang-css" data-lang="css">css</button><button type="button" class="te-popup-code-block-lang-d" data-lang="d">d</button><button type="button" class="te-popup-code-block-lang-markdown" data-lang="markdown">markdown</button><button type="button" class="te-popup-code-block-lang-dart" data-lang="dart">dart</button><button type="button" class="te-popup-code-block-lang-delphi" data-lang="delphi">delphi</button><button type="button" class="te-popup-code-block-lang-diff" data-lang="diff">diff</button><button type="button" class="te-popup-code-block-lang-django" data-lang="django">django</button><button type="button" class="te-popup-code-block-lang-dns" data-lang="dns">dns</button><button type="button" class="te-popup-code-block-lang-dockerfile" data-lang="dockerfile">dockerfile</button><button type="button" class="te-popup-code-block-lang-dos" data-lang="dos">dos</button><button type="button" class="te-popup-code-block-lang-dsconfig" data-lang="dsconfig">dsconfig</button><button type="button" class="te-popup-code-block-lang-dts" data-lang="dts">dts</button><button type="button" class="te-popup-code-block-lang-dust" data-lang="dust">dust</button><button type="button" class="te-popup-code-block-lang-ebnf" data-lang="ebnf">ebnf</button><button type="button" class="te-popup-code-block-lang-elixir" data-lang="elixir">elixir</button><button type="button" class="te-popup-code-block-lang-elm" data-lang="elm">elm</button><button type="button" class="te-popup-code-block-lang-ruby" data-lang="ruby">ruby</button><button type="button" class="te-popup-code-block-lang-erb" data-lang="erb">erb</button><button type="button" class="te-popup-code-block-lang-erlang-repl" data-lang="erlang-repl">erlang-repl</button><button type="button" class="te-popup-code-block-lang-erlang" data-lang="erlang">erlang</button><button type="button" class="te-popup-code-block-lang-excel" data-lang="excel">excel</button><button type="button" class="te-popup-code-block-lang-fix" data-lang="fix">fix</button><button type="button" class="te-popup-code-block-lang-flix" data-lang="flix">flix</button><button type="button" class="te-popup-code-block-lang-fortran" data-lang="fortran">fortran</button><button type="button" class="te-popup-code-block-lang-fsharp" data-lang="fsharp">fsharp</button><button type="button" class="te-popup-code-block-lang-gams" data-lang="gams">gams</button><button type="button" class="te-popup-code-block-lang-gauss" data-lang="gauss">gauss</button><button type="button" class="te-popup-code-block-lang-gcode" data-lang="gcode">gcode</button><button type="button" class="te-popup-code-block-lang-gherkin" data-lang="gherkin">gherkin</button><button type="button" class="te-popup-code-block-lang-glsl" data-lang="glsl">glsl</button><button type="button" class="te-popup-code-block-lang-go" data-lang="go">go</button><button type="button" class="te-popup-code-block-lang-golo" data-lang="golo">golo</button><button type="button" class="te-popup-code-block-lang-gradle" data-lang="gradle">gradle</button><button type="button" class="te-popup-code-block-lang-groovy" data-lang="groovy">groovy</button><button type="button" class="te-popup-code-block-lang-haml" data-lang="haml">haml</button><button type="button" class="te-popup-code-block-lang-handlebars" data-lang="handlebars">handlebars</button><button type="button" class="te-popup-code-block-lang-haskell" data-lang="haskell">haskell</button><button type="button" class="te-popup-code-block-lang-haxe" data-lang="haxe">haxe</button><button type="button" class="te-popup-code-block-lang-hsp" data-lang="hsp">hsp</button><button type="button" class="te-popup-code-block-lang-htmlbars" data-lang="htmlbars">htmlbars</button><button type="button" class="te-popup-code-block-lang-http" data-lang="http">http</button><button type="button" class="te-popup-code-block-lang-hy" data-lang="hy">hy</button><button type="button" class="te-popup-code-block-lang-inform7" data-lang="inform7">inform7</button><button type="button" class="te-popup-code-block-lang-ini" data-lang="ini">ini</button><button type="button" class="te-popup-code-block-lang-irpf90" data-lang="irpf90">irpf90</button><button type="button" class="te-popup-code-block-lang-java" data-lang="java">java</button><button type="button" class="te-popup-code-block-lang-javascript" data-lang="javascript">javascript</button><button type="button" class="te-popup-code-block-lang-jboss-cli" data-lang="jboss-cli">jboss-cli</button><button type="button" class="te-popup-code-block-lang-json" data-lang="json">json</button><button type="button" class="te-popup-code-block-lang-julia" data-lang="julia">julia</button><button type="button" class="te-popup-code-block-lang-julia-repl" data-lang="julia-repl">julia-repl</button><button type="button" class="te-popup-code-block-lang-kotlin" data-lang="kotlin">kotlin</button><button type="button" class="te-popup-code-block-lang-lasso" data-lang="lasso">lasso</button><button type="button" class="te-popup-code-block-lang-ldif" data-lang="ldif">ldif</button><button type="button" class="te-popup-code-block-lang-leaf" data-lang="leaf">leaf</button><button type="button" class="te-popup-code-block-lang-less" data-lang="less">less</button><button type="button" class="te-popup-code-block-lang-lisp" data-lang="lisp">lisp</button><button type="button" class="te-popup-code-block-lang-livecodeserver" data-lang="livecodeserver">livecodeserver</button><button type="button" class="te-popup-code-block-lang-livescript" data-lang="livescript">livescript</button><button type="button" class="te-popup-code-block-lang-llvm" data-lang="llvm">llvm</button><button type="button" class="te-popup-code-block-lang-lsl" data-lang="lsl">lsl</button><button type="button" class="te-popup-code-block-lang-lua" data-lang="lua">lua</button><button type="button" class="te-popup-code-block-lang-makefile" data-lang="makefile">makefile</button><button type="button" class="te-popup-code-block-lang-mathematica" data-lang="mathematica">mathematica</button><button type="button" class="te-popup-code-block-lang-matlab" data-lang="matlab">matlab</button><button type="button" class="te-popup-code-block-lang-maxima" data-lang="maxima">maxima</button><button type="button" class="te-popup-code-block-lang-mel" data-lang="mel">mel</button><button type="button" class="te-popup-code-block-lang-mercury" data-lang="mercury">mercury</button><button type="button" class="te-popup-code-block-lang-mipsasm" data-lang="mipsasm">mipsasm</button><button type="button" class="te-popup-code-block-lang-mizar" data-lang="mizar">mizar</button><button type="button" class="te-popup-code-block-lang-perl" data-lang="perl">perl</button><button type="button" class="te-popup-code-block-lang-mojolicious" data-lang="mojolicious">mojolicious</button><button type="button" class="te-popup-code-block-lang-monkey" data-lang="monkey">monkey</button><button type="button" class="te-popup-code-block-lang-moonscript" data-lang="moonscript">moonscript</button><button type="button" class="te-popup-code-block-lang-n1ql" data-lang="n1ql">n1ql</button><button type="button" class="te-popup-code-block-lang-nginx" data-lang="nginx">nginx</button><button type="button" class="te-popup-code-block-lang-nimrod" data-lang="nimrod">nimrod</button><button type="button" class="te-popup-code-block-lang-nix" data-lang="nix">nix</button><button type="button" class="te-popup-code-block-lang-nsis" data-lang="nsis">nsis</button><button type="button" class="te-popup-code-block-lang-objectivec" data-lang="objectivec">objectivec</button><button type="button" class="te-popup-code-block-lang-ocaml" data-lang="ocaml">ocaml</button><button type="button" class="te-popup-code-block-lang-openscad" data-lang="openscad">openscad</button><button type="button" class="te-popup-code-block-lang-oxygene" data-lang="oxygene">oxygene</button><button type="button" class="te-popup-code-block-lang-parser3" data-lang="parser3">parser3</button><button type="button" class="te-popup-code-block-lang-pf" data-lang="pf">pf</button><button type="button" class="te-popup-code-block-lang-php" data-lang="php">php</button><button type="button" class="te-popup-code-block-lang-pony" data-lang="pony">pony</button><button type="button" class="te-popup-code-block-lang-powershell" data-lang="powershell">powershell</button><button type="button" class="te-popup-code-block-lang-processing" data-lang="processing">processing</button><button type="button" class="te-popup-code-block-lang-profile" data-lang="profile">profile</button><button type="button" class="te-popup-code-block-lang-prolog" data-lang="prolog">prolog</button><button type="button" class="te-popup-code-block-lang-protobuf" data-lang="protobuf">protobuf</button><button type="button" class="te-popup-code-block-lang-puppet" data-lang="puppet">puppet</button><button type="button" class="te-popup-code-block-lang-purebasic" data-lang="purebasic">purebasic</button><button type="button" class="te-popup-code-block-lang-python" data-lang="python">python</button><button type="button" class="te-popup-code-block-lang-q" data-lang="q">q</button><button type="button" class="te-popup-code-block-lang-qml" data-lang="qml">qml</button><button type="button" class="te-popup-code-block-lang-r" data-lang="r">r</button><button type="button" class="te-popup-code-block-lang-rib" data-lang="rib">rib</button><button type="button" class="te-popup-code-block-lang-roboconf" data-lang="roboconf">roboconf</button><button type="button" class="te-popup-code-block-lang-routeros" data-lang="routeros">routeros</button><button type="button" class="te-popup-code-block-lang-rsl" data-lang="rsl">rsl</button><button type="button" class="te-popup-code-block-lang-ruleslanguage" data-lang="ruleslanguage">ruleslanguage</button><button type="button" class="te-popup-code-block-lang-rust" data-lang="rust">rust</button><button type="button" class="te-popup-code-block-lang-scala" data-lang="scala">scala</button><button type="button" class="te-popup-code-block-lang-scheme" data-lang="scheme">scheme</button><button type="button" class="te-popup-code-block-lang-scilab" data-lang="scilab">scilab</button><button type="button" class="te-popup-code-block-lang-scss" data-lang="scss">scss</button><button type="button" class="te-popup-code-block-lang-shell" data-lang="shell">shell</button><button type="button" class="te-popup-code-block-lang-smali" data-lang="smali">smali</button><button type="button" class="te-popup-code-block-lang-smalltalk" data-lang="smalltalk">smalltalk</button><button type="button" class="te-popup-code-block-lang-sml" data-lang="sml">sml</button><button type="button" class="te-popup-code-block-lang-sqf" data-lang="sqf">sqf</button><button type="button" class="te-popup-code-block-lang-sql" data-lang="sql">sql</button><button type="button" class="te-popup-code-block-lang-stan" data-lang="stan">stan</button><button type="button" class="te-popup-code-block-lang-stata" data-lang="stata">stata</button><button type="button" class="te-popup-code-block-lang-step21" data-lang="step21">step21</button><button type="button" class="te-popup-code-block-lang-stylus" data-lang="stylus">stylus</button><button type="button" class="te-popup-code-block-lang-subunit" data-lang="subunit">subunit</button><button type="button" class="te-popup-code-block-lang-swift" data-lang="swift">swift</button><button type="button" class="te-popup-code-block-lang-taggerscript" data-lang="taggerscript">taggerscript</button><button type="button" class="te-popup-code-block-lang-yaml" data-lang="yaml">yaml</button><button type="button" class="te-popup-code-block-lang-tap" data-lang="tap">tap</button><button type="button" class="te-popup-code-block-lang-tcl" data-lang="tcl">tcl</button><button type="button" class="te-popup-code-block-lang-tex" data-lang="tex">tex</button><button type="button" class="te-popup-code-block-lang-thrift" data-lang="thrift">thrift</button><button type="button" class="te-popup-code-block-lang-tp" data-lang="tp">tp</button><button type="button" class="te-popup-code-block-lang-twig" data-lang="twig">twig</button><button type="button" class="te-popup-code-block-lang-typescript" data-lang="typescript">typescript</button><button type="button" class="te-popup-code-block-lang-vala" data-lang="vala">vala</button><button type="button" class="te-popup-code-block-lang-vbnet" data-lang="vbnet">vbnet</button><button type="button" class="te-popup-code-block-lang-vbscript" data-lang="vbscript">vbscript</button><button type="button" class="te-popup-code-block-lang-vbscript-html" data-lang="vbscript-html">vbscript-html</button><button type="button" class="te-popup-code-block-lang-verilog" data-lang="verilog">verilog</button><button type="button" class="te-popup-code-block-lang-vhdl" data-lang="vhdl">vhdl</button><button type="button" class="te-popup-code-block-lang-vim" data-lang="vim">vim</button><button type="button" class="te-popup-code-block-lang-x86asm" data-lang="x86asm">x86asm</button><button type="button" class="te-popup-code-block-lang-xl" data-lang="xl">xl</button><button type="button" class="te-popup-code-block-lang-xquery" data-lang="xquery">xquery</button><button type="button" class="te-popup-code-block-lang-zephir" data-lang="zephir">zephir</button></div></div><div class="tui-popup-modal-background tui-popup-code-block-editor" style="display: none;"><div class="tui-popup-wrapper">
+        <div class="tui-popup-header">
+            <span class="tui-popup-title">CodeBlock Editor<span class="te-input-language"><input type="text" maxlength="20" placeholder="Choose language"></span></span>
+            <div class="tui-popup-header-buttons"><button type="button" class="popup-editor-toggle-scroll active" style="display: inline-block;"></button>
+    <button type="button" class="popup-editor-toggle-preview active"></button>
+    <button type="button" class="popup-editor-toggle-fit"></button>
+    <button type="button" class="tui-popup-close-button"></button></div>
+        </div>
+        <div class="tui-popup-body"><div class="popup-editor-body"><div class="tui-split-scroll scroll-sync"><div class="tui-split-scroll-wrapper"><div class="tui-split-scroll-content"><div class="popup-editor-editor-wrapper tui-split-content-left"><textarea style="display: none;"></textarea><div class="CodeMirror cm-s-none CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px;"></div><div class="CodeMirror-gutters" style="display: none;"></div></div></div></div><div class="tui-split-content-right" style="top: 0px;"><div class="tui-editor-contents"></div></div></div><div class="tui-splitter"></div></div></div></div>
+            <div class="te-button-section">
+                <button type="button" class="te-ok-button btn submit-btn">OK</button>
+                <button type="button" class="te-close-button btn btn-default">Cancel</button>
+            </div></div>
+    </div></div></div></div>
+                    <div class="invalid-feedback"></div>
+                    <div class="btn-comment-wrapper">
+                        <span class="info"></span>
+                        <div class="messageDialog">Success</div>
+                        <button class="btn-comment" id="comment" data-id="8e4eb43eb6d448828cb5a43a1db512e7">Add Comment</button>
+                    </div>
+                    <div class="md-editor-layer login-md-editor-layer hide" style="display: inherit;">
+                        <span><a href="https://easyeda.com/login?from=%2FKenjutsu%2FILI9341_Backlight_PWM_control-6H31LveAW">Login</a> or <a href="https://easyeda.com/register?from=%2FKenjutsu%2FILI9341_Backlight_PWM_control-6H31LveAW">Register</a> to add a comment</span>
+                    </div>
+                    <div class="md-editor-layer allow-md-editor-layer hide">
+                        <span>The owner does not allow comments in this project now</span>
+                    </div>
+                </div>
+                <h2 id="comment-count">Comments <span>(<em class="comment-count">0</em>)</span></h2>
+                <div class="comment-box">
+                                    </div>
+
+                <div class="more-comment" style="display: none;">
+                    <a href="javascript:void(0);" class="btn-add-comment">
+                        <i class="icon-base icon-add-comment"></i>
+                        <span>Add Comment</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fixed-right-tabs hidden-sm hidden-xs" style="display: none;">
+        <ul>
+            <li class="active">Description</li>
+            <li>Documents</li>
+            <li>BOM</li>
+            <li>Attachments</li>
+            <li>Members</li>
+            <li>Comments</li>
+        </ul>
+    </div>
+    <div class="modal dialog">
+        <h5 class="title"></h5>
+        <img src="./ILI9341 Backlight PWM control - EasyEDA_files/btn-close-orange.png" class="btn-close">
+        <textarea class="txt-content" placeholder="Say something ?"></textarea>
+        <div class="btns">
+            <button class="btn-sure btn-blue">OK</button>
+            <button class="btn-cancel btn-blue">Cancel</button>
+        </div>
+    </div>
+    <div class="modal-message">
+        <em class="msg-left"></em>
+        <span></span>
+    </div>
+    </div>
+    <div id="footer" class="clearfix">
+  <div class="footer-public-info">
+    <h1>An Easier and Powerful Online PCB Design Tool</h1>
+    <p> <span><strong>1,608,861 </strong></span>Engineers Chose EasyEDA</p>
+    <a target="_blank" href="https://easyeda.com/editor">
+      <div class="special-a-warp">
+        Try Now      </div>
+    </a>
+  </div>
+  <div class="footer-black-bg"></div>
+  <div class="about-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="footer-question-way">
+            <li class="col-sm-6 col-md-3">
+              <a href="https://easyeda.com/page/pricing">
+                <img src="./ILI9341 Backlight PWM control - EasyEDA_files/footer-buy.png">
+                <span>  Pricing</span>
+              </a>
+            </li>
+            <li class="col-sm-6 col-md-3">
+              <a href="https://easyeda.com/page/download">
+                <img src="./ILI9341 Backlight PWM control - EasyEDA_files/footer-download.png">
+                <span> Download</span>
+              </a>
+            </li>
+            <li class="col-sm-6 col-md-3 ">
+              <a href="javascript:;">
+                <img src="./ILI9341 Backlight PWM control - EasyEDA_files/footer-stop.png">
+                <span> One Stop</span>
+              </a>
+            </li>
+            <li class="col-sm-6 col-md-3">
+                            <a href="https://docs.easyeda.com/en/FAQ/Contact-Us/index.html" class="footer-a-special">
+                <img src="./ILI9341 Backlight PWM control - EasyEDA_files/footer-contact.png">
+                <span> Contact Us</span>
+              </a>
+                          </li>
+          </ul>
+          <div class="footer-line"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 footer-items">
+          <dl>
+            <dt>Policy terms</dt>
+            <dd><a href="https://easyeda.com/page/legal" rel="nofollow">Legal</a></dd>
+            <dd><a href="https://easyeda.com/page/privacy" rel="nofollow">Privacy</a></dd>
+            <dd><a href="https://easyeda.com/page/contribute" rel="nofollow">Contribute</a></dd>
+            <dd><a href="https://easyeda.com/page/thanks" rel="nofollow">Thanks</a></dd>
+          </dl>
+          <dl>
+            <dt>Solution</dt>
+            <dd><a href="https://easyeda.com/editor">Online Editor</a></dd>
+                        <dd><a href="https://easyeda.com/on-premises-hosting">On-Premises Hosting</a></dd>
+                        <dd><a href="https://docs.easyeda.com/en/DocumentFormat/0-EasyEDA-File-Format-Index/index.html">Document Format</a>
+            </dd>
+            <dd><a href="https://docs.easyeda.com/en/API/1-How-to-Use-API/index.html">API</a>
+            </dd>
+                      </dl>
+          <dl>
+            <dt> Help</dt>
+                        <dd><a href="https://easyeda.com/forum">Forum</a></dd>
+            <dd><a href="https://docs.easyeda.com/en/FAQ/Editor/index.html">Tutorial</a></dd>
+            <dd><a href="https://easyeda.com/page/update-record">Update Notice</a></dd>
+            <dd><a href="https://docs.easyeda.com/en/FAQ/Contact-Us/index.html"> Contact Us</a></dd>
+                      </dl>
+          <dl>
+            <dt> Services</dt>
+                        <dd><a href="https://lcsc.com/?href=easyeda-footer&amp;source=easyeda" rel="nofollow"> Parts Order - LCSC</a></dd>
+            <dd><a href="https://jlcpcb.com/?href=easyeda-home" rel="nofollow"> PCB Order - JLCPCB</a>
+            </dd>
+            <dd><a href="https://oshwlab.com/" target="_blank">Open Source Hardware - OSHWLab</a></dd>
+                      </dl>
+          <dl>
+            <dt> About</dt>
+            <dd><a href="https://easyeda.com/page/about" rel="nofollow">About Team</a></dd>
+            <dd class="media-icon" style="margin-top:25px">
+              <a href="https://www.youtube.com/channel/UCRoMhHNzl7tMW8pFsdJGUIA/featured" target="_blank" rel="nofollow">
+                <img src="./ILI9341 Backlight PWM control - EasyEDA_files/youtube.svg" style="width:68px; margin-right:15px">
+              </a>
+              <a href="https://twitter.com/EasyEDA" target="_blank" rel="nofollow">
+                <img src="./ILI9341 Backlight PWM control - EasyEDA_files/twitter.svg" style="width:34px;">
+              </a>
+            </dd>
+                      </dl>
+        </div>
+      </div>
+      <div class="footer-line footer-line-2"></div>
+    </div>
+  </div>
+  <div class="logo-wrapper">
+    <div class="container">
+            <div class="footer-logo">
+        <div class="col-md-3">
+          <div class="footer-logo-eda">
+            <a href="https://easyeda.com/">
+              <svg aria-hidden="true">
+                <use xlink:href="#svg-logo"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <p class="gov"></p>
+          <p><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030402002736" target="_blank" rel="nofollow">粤公网安备 44030402002736号</a></p>
+          <p><a href="http://www.beian.miit.gov.cn/" target="_blank" rel="nofollow">粤ICP备13005967号-5</a></p>
+          <p>© 2020 EasyEDA All rights reserved</p>
+        </div>
+      </div>
+          </div>
+  </div>
+</div>
+<img src="./ILI9341 Backlight PWM control - EasyEDA_files/goTop.png" alt="goToTop" id="goToTop" style="bottom: 100px; display: none;">
+<div id="warn-cn">
+  你现在访问的是EasyEDA海外版，使用建立访问速度更快的国内版 <a href="https://lceda.cn/">https://lceda.cn(需要重新注册)</a><br>如果需要转移工程请在个人中心
+  - 工程 - 工程高级设置 - 下载工程，下载后在<a href="https://lceda.cn/editor">https://lceda.cn/editor</a> 打开保存即可。<br>有问题联系QQ
+  3001956291 <span class="close">不再提醒<i class="remove icon"></i></span>
+</div>
+
+<div style="display:none;">
+  <svg>
+    <svg id="svg-battery" data-name="svg-battery" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <title>svg-battery</title>
+      <g style="opacity:0.25">
+        <path d="M224.83,136.21c0,2.89-4.46,5.24-10,5.24h-49.7c-5.49,0-9.95-2.35-9.95-5.24V80.56c0-2.89,4.46-5.24,9.95-5.24h49.75c5.49,0,10,2.35,10,5.24Z" style="fill:currentColor"></path>
+        <path d="M214.88,142.79H165.13c-6.33,0-11.29-2.89-11.29-6.58V80.56c0-3.69,5-6.58,11.29-6.58h49.75c6.33,0,11.29,2.89,11.29,6.58v55.65C226.17,139.9,221.21,142.79,214.88,142.79ZM165.13,76.66c-4.93,0-8.61,2.06-8.61,3.9v55.65c0,1.84,3.68,3.9,8.61,3.9h49.75c4.93,0,8.61-2.06,8.61-3.9V80.56c0-1.84-3.68-3.9-8.61-3.9Z" style="fill:currentColor"></path>
+      </g>
+      <rect x="77.41" y="86.22" width="32.75" height="9.51" style="fill:currentColor"></rect>
+      <rect x="89.03" y="74.6" width="9.51" height="32.75" style="fill:currentColor"></rect>
+      <path d="M214.05,69.14H203.48V59.88h-9.61V50.56a5.36,5.36,0,0,0-5.34-5.36H65.71a16.74,16.74,0,1,0,0,10.71H183.16v4h-8.29v9.26H164.3A15.33,15.33,0,0,0,149,84.44V190.16a15.32,15.32,0,0,0,15.3,15.31H184v6H57.48V174.84a18,18,0,1,0-10.71.11v41.87a5.36,5.36,0,0,0,5.35,5.36H189.35a5.36,5.36,0,0,0,5.35-5.36V205.47h19.35a15.33,15.33,0,0,0,15.31-15.31V84.44A15.33,15.33,0,0,0,214.05,69.14ZM49.87,56.57a6,6,0,1,1,6-6A6,6,0,0,1,49.87,56.57Zm2.07,93.91a7.27,7.27,0,1,1-7.26,7.28v0a7.27,7.27,0,0,1,7.26-7.26Zm166.7,39.68a4.61,4.61,0,0,1-4.59,4.59H164.3a4.61,4.61,0,0,1-4.59-4.59V84.44a4.61,4.61,0,0,1,4.59-4.59h49.75a4.61,4.61,0,0,1,4.59,4.59Z" style="fill:currentColor"></path>
+      <rect x="165.23" y="174.92" width="47.88" height="14.92" style="fill:currentColor"></rect>
+      <rect x="165.23" y="155.03" width="47.88" height="14.92" style="fill:currentColor"></rect>
+      <rect x="165.23" y="135.13" width="47.88" height="14.92" style="fill:currentColor"></rect>
+      <rect x="79.55" y="187.22" width="28.47" height="8.27" style="fill:currentColor"></rect>
+    </svg>
+    <svg id="svg-battery-wifi" data-name="svg-battery-wifi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <title>svg-battery-wifi</title>
+      <g style="opacity:0.25">
+        <path d="M162.07,114.05H223v-.29a60.71,60.71,0,0,0-60.7-60.71h-.22Z" style="fill:currentColor"></path>
+      </g>
+      <rect x="56.11" y="167.1" width="54.02" height="16.84" style="fill:currentColor"></rect>
+      <rect x="56.11" y="144.27" width="54.02" height="16.84" style="fill:currentColor"></rect>
+      <rect x="56.11" y="121.44" width="54.02" height="16.84" style="fill:currentColor"></rect>
+      <path d="M223.51,197.89a22,22,0,1,0-40.68,11.54H86.65v-8h22.88a16.6,16.6,0,0,0,16.58-16.58V65.6A16.6,16.6,0,0,0,109.53,49H97.6V37.89H65.33V49H53.41A16.6,16.6,0,0,0,36.83,65.6V184.87a16.6,16.6,0,0,0,16.58,16.58H75.94v13.34a5.36,5.36,0,0,0,5.36,5.36H202.45a5.11,5.11,0,0,0,2.27-.53A22,22,0,0,0,223.51,197.89Zm-176-13V65.6a5.87,5.87,0,0,1,5.87-5.86H109.5a5.87,5.87,0,0,1,5.87,5.86V184.87a5.89,5.89,0,0,1-5.87,5.87H53.41a5.89,5.89,0,0,1-5.87-5.87Zm154,24.3a11.28,11.28,0,1,1,11.28-11.28h0a11.31,11.31,0,0,1-11.27,11.26Z" style="fill:currentColor"></path>
+      <path d="M195.26,122.81v.36l10.72.06v-.36A66.18,66.18,0,0,0,139.7,56.81h0l.22,10.71A55.4,55.4,0,0,1,195.26,122.81Z" style="fill:currentColor"></path>
+      <path d="M176.52,128.63V129l10.71.12v-.33a47.46,47.46,0,0,0-47.5-47.42h0l.15,10.71A36.69,36.69,0,0,1,176.52,128.63Z" style="fill:currentColor"></path>
+      <path d="M157.45,137v.24l10.72-.11a28.43,28.43,0,0,0-28.46-28.38h0l.08,10.71A17.68,17.68,0,0,1,157.45,137Z" style="fill:currentColor"></path>
+    </svg>
+    <svg id="svg-books" data-name="svg-books" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <title>svg-books</title>
+      <path d="M54.89,211h38.8V54.79H54.89ZM60.25,60.15H88.33V205.67H60.25Z" style="fill:currentColor"></path>
+      <path d="M146.87,54.46H102.71v88h44.16Zm-10.72,77.25H113.43V65.17h22.72Z" style="fill:currentColor"></path>
+      <path d="M199.56,54.46H155.41v88h44.15Zm-10.71,77.25H166.12V65.17h22.73Z" style="fill:currentColor"></path>
+      <path d="M104.39,151.47v25.32h96.72V151.47Zm91.36,20h-86V156.82h86Z" style="fill:currentColor"></path>
+      <path d="M104.39,211.32h96.72V186H104.39Zm5.35-20h86V206h-86Z" style="fill:currentColor"></path>
+      <g style="opacity:0.25">
+        <rect x="76.48" y="105.17" width="119.16" height="58.11" style="fill:currentColor"></rect>
+        <path d="M195.64,164.62H76.48a1.34,1.34,0,0,1-1.34-1.34V105.17a1.34,1.34,0,0,1,1.34-1.34H195.64a1.34,1.34,0,0,1,1.34,1.34v58.11A1.34,1.34,0,0,1,195.64,164.62ZM77.82,161.94H194.3V106.51H77.82Z" style="fill:currentColor"></path>
+      </g>
+    </svg>
+    <svg id="svg-more" data-name="svg-more" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <title>svg-more</title>
+      <path d="M216.34,62.9H39.66a15.27,15.27,0,1,1,0-30.54H216.34a15.27,15.27,0,1,1,0,30.54Z" style="fill:currentColor"></path>
+      <path d="M216.34,143.27H39.66a15.27,15.27,0,1,1,0-30.54H216.34a15.27,15.27,0,1,1,0,30.54Z" style="fill:currentColor"></path>
+      <path d="M216.34,223.64H39.66a15.27,15.27,0,0,1,0-30.54H216.34a15.27,15.27,0,1,1,0,30.54Z" style="fill:currentColor"></path>
+    </svg>
+    <svg id="svg-paste" data-name="svg-paste" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <title>svg-paste</title>
+      <g style="opacity:0.25">
+        <rect x="71.81" y="139.04" width="118.53" height="87.04" style="fill:currentColor"></rect>
+      </g>
+      <path d="M54.62,125.1a2.68,2.68,0,1,0,0,5.36h65.7a2.68,2.68,0,0,0,0-5.36Z" style="fill:currentColor"></path>
+      <path d="M120.32,152.55H54.63a2.68,2.68,0,1,0,0,5.36h65.69a2.68,2.68,0,1,0,0-5.36Z" style="fill:currentColor"></path>
+      <path d="M120.32,183.35H54.63a2.68,2.68,0,1,0,0,5.36h65.69a2.68,2.68,0,1,0,0-5.36Z" style="fill:currentColor"></path>
+      <path d="M241.7,62.12c-52.56-51.33-89.32-21-100.19-9.37l-16-17.27c-1.69-1.82-3.25-1.29-3.47,1.19l-1.58,17.8H32.57a5.36,5.36,0,0,0-5.35,5.35h0V211.14a5.34,5.34,0,0,0,5.33,5.35H142.37a5.36,5.36,0,0,0,5.36-5.34h0V106.49l38.53-.37c2.49,0,3.14-1.54,1.45-3.36l-19.37-21C192.32,49.86,241.7,62.12,241.7,62.12ZM137,205.78H37.93V65.18h81.62L117,93.63H79.78a14.06,14.06,0,1,0,0,5.36h36.78l-.29,3.29a4,4,0,0,0,3.5,4.44,3.22,3.22,0,0,0,.62,0l16.63-.16ZM74.7,96.31a8.7,8.7,0,1,1-8.7-8.7h0A8.72,8.72,0,0,1,74.7,96.31Z" style="fill:currentColor"></path>
+    </svg>
+    <svg id="svg-pencil" data-name="svg-pencil" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <title>svg-pencil</title>
+      <g style="opacity:0.25">
+        <path d="M85.9,205.2c0,5.3-4.7,9.6-10.6,9.6H46c-5.8,0-10.6-4.3-10.6-9.6V174.1c0-5.3,4.7-9.6,10.6-9.6H75.2c5.8,0,10.6,4.3,10.6,9.6v31.1Z" style="fill:currentColor"></path>
+      </g>
+      <path d="M236,49.2,214.8,27.9a11.86,11.86,0,0,0-16.8,0L186.7,39.1a1.39,1.39,0,0,0,0,1.9l36,36.2a1.22,1.22,0,0,0,.9.4h0a1,1,0,0,0,.9-.4L236,66A11.86,11.86,0,0,0,236,49.2Z" style="fill:currentColor"></path>
+      <path d="M76.4,172.2a1.37,1.37,0,0,0-1.2-.4L74,172a1.41,1.41,0,0,0-1.1,1l-5.3,24.4a1.31,1.31,0,0,0,.4,1.3,1.8,1.8,0,0,0,.9.4.6.6,0,0,0,.4-.1l23-6.9a1.17,1.17,0,0,0,.9-1l.2-1a1.15,1.15,0,0,0-.4-1.2,1.37,1.37,0,0,0-1.2-.4l-6.7,1.4a1.29,1.29,0,0,1-1.2-.4,1.31,1.31,0,0,1-.3-1.2l1.5-6.5a1.31,1.31,0,0,0-.3-1.2,1.37,1.37,0,0,0-1.2-.4l-6.8,1.3a1.37,1.37,0,0,1-1.2-.4,1.31,1.31,0,0,1-.3-1.2l1.6-6.4A1.66,1.66,0,0,0,76.4,172.2Z" style="fill:currentColor"></path>
+      <path d="M182.4,45.1a1.22,1.22,0,0,0-.9-.4h0a1,1,0,0,0-.9.4L79.1,146.2a1.61,1.61,0,0,0-.4.7l-4.5,20.5a1.31,1.31,0,0,0,.3,1.2,1.37,1.37,0,0,0,1.2.4l3-.5a1.29,1.29,0,0,1,1.2.4,1.31,1.31,0,0,1,.3,1.2l-1.6,6.3a1.31,1.31,0,0,0,.3,1.2,1.37,1.37,0,0,0,1.2.4l6.8-1.3a1.37,1.37,0,0,1,1.2.4,1.31,1.31,0,0,1,.3,1.2l-1.5,6.4a1.31,1.31,0,0,0,.3,1.2,1.37,1.37,0,0,0,1.2.4l6.7-1.4a1.09,1.09,0,0,1,1.2.4,1.37,1.37,0,0,1,.4,1.2l-.5,2.1a1.31,1.31,0,0,0,.4,1.3,1.8,1.8,0,0,0,.9.4.6.6,0,0,0,.4-.1l18.5-5.6.6-.3,40.6-40.5v74.8H27.2V88.2H73.8a18.9,18.9,0,1,0,1.4-10.7H21.9a5.38,5.38,0,0,0-5.4,5.4V224.2a5.38,5.38,0,0,0,5.4,5.4H163.2a5.38,5.38,0,0,0,5.4-5.4V137.4a5.45,5.45,0,0,0-1-3.1l51.1-50.9a1.39,1.39,0,0,0,0-1.9ZM92.5,76.9a8.2,8.2,0,1,1-8.2,8.2A8.24,8.24,0,0,1,92.5,76.9Z" style="fill:currentColor"></path>
+    </svg>
+    <svg id="svg-plant" data-name="svg-plant" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <title>svg-plant</title>
+      <g style="opacity:0.25">
+        <rect x="80.67" y="176.39" width="94.26" height="37.37" rx="10.19" ry="10.19" style="fill:currentColor"></rect>
+      </g>
+      <path d="M228.24,144.88a25.65,25.65,0,1,0-27.64,25.54v10H161.36a2.54,2.54,0,0,0-2.54,2.54v7H148.1V152.59h18a2.55,2.55,0,0,0,2.55-2.55h0V118.51a25.67,25.67,0,1,0-5.1.16v28.82h-18A2.55,2.55,0,0,0,143,150v40H130.35V66.86a25.64,25.64,0,1,0-5.1,0V190H112.6V150a2.55,2.55,0,0,0-2.55-2.55h-18V118.67a25.61,25.61,0,1,0-5.1-.16V150a2.55,2.55,0,0,0,2.55,2.55h18V190H96.78v-7a2.56,2.56,0,0,0-2.55-2.54H55v-10a25.64,25.64,0,1,0-5.1-.11V183a2.55,2.55,0,0,0,2.55,2.55H91.69V190H74.62a15.31,15.31,0,0,0-15.29,15.29V225a15.32,15.32,0,0,0,15.29,15.3H181A15.31,15.31,0,0,0,196.27,225V205.27A15.31,15.31,0,0,0,181,190H163.91v-4.46h39.24A2.56,2.56,0,0,0,205.7,183V170.31A25.66,25.66,0,0,0,228.24,144.88ZM149.82,93.11a15.45,15.45,0,1,1,15.45,15.45h0A15.47,15.47,0,0,1,149.82,93.11ZM112.35,41.34A15.45,15.45,0,1,1,127.8,56.8,15.45,15.45,0,0,1,112.35,41.34ZM74.88,93.11a15.45,15.45,0,1,1,15.45,15.45h0A15.47,15.47,0,0,1,74.88,93.11ZM37.55,144.88A15.46,15.46,0,1,1,53,160.33h0A15.47,15.47,0,0,1,37.55,144.88Zm148.53,60.39V225a5.12,5.12,0,0,1-5.1,5.1H74.62a5.12,5.12,0,0,1-5.1-5.1V205.27a5.12,5.12,0,0,1,5.1-5.1H181A5.11,5.11,0,0,1,186.08,205.27Zm16.51-44.94a15.45,15.45,0,1,1,15.46-15.45A15.45,15.45,0,0,1,202.59,160.33Z" style="fill:currentColor"></path>
+    </svg>
+    <svg id="svg-ruler" data-name="svg-ruler" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <title>svg-ruler</title>
+      <path d="M171.21,176.51H82.84V140.36h88.37Zm-83-5.35h77.67V145.72H88.19Z" style="fill:currentColor"></path>
+      <g style="opacity:0.25">
+        <rect x="85.51" y="143.04" width="83.02" height="30.8" style="fill:currentColor"></rect>
+      </g>
+      <path d="M229.69,107.33a19,19,0,1,0-24.3,18.16v77.8h-73v-38.8a5.36,5.36,0,1,0-10.71-.46,3.53,3.53,0,0,0,0,.46v44.16A5.36,5.36,0,0,0,127,214h83.72a5.36,5.36,0,0,0,5.36-5.36h0V125.49A19,19,0,0,0,229.69,107.33Zm-18.95,8.23a8.23,8.23,0,1,1,8.23-8.23h0A8.25,8.25,0,0,1,210.74,115.56Z" style="fill:currentColor"></path>
+      <rect x="37.31" y="46.53" width="30.16" height="30.16" rx="1.98" ry="1.98" style="fill:currentColor"></rect>
+      <path d="M89.87,65h12.24V77h10.2V65h12.24V77h10.19V56.71H147V76.92h10.19V65h12.24V77h12V56.32a9.79,9.79,0,0,0-9.79-9.79H77.85V76.92h12Z" style="fill:currentColor"></path>
+      <path d="M37.31,178.68a9.79,9.79,0,0,0,9.79,9.79H67.71v-12H55.76V164.2H67.71V154H47.5V141.77H67.71V131.58H55.76V119.34H67.71v-10.2H55.76V96.91H67.71v-12H37.31Z" style="fill:currentColor"></path>
+      <path d="M171.21,89.48H82.84v36.15h88.37Zm-5.35,30.79H88.19V94.83h77.67Z" style="fill:currentColor"></path>
+    </svg>
+    <svg id="svg-share" data-name="svg-share" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <title>svg-share</title>
+      <g style="opacity:0.25">
+        <rect x="131.31" y="124.42" width="48.82" height="51.33" style="fill:currentColor"></rect>
+      </g>
+      <path d="M169.6,85.12l16,23.62c1.4,2.06,3,1.76,3.61-.65l15.5-64a4,4,0,0,0-2.84-4.89,3.82,3.82,0,0,0-.57-.11l-65.23-9.18c-2.46-.35-3.33,1.05-1.94,3.11l13.22,19.45a63.77,63.77,0,0,0-22,20.92H56.68a5.36,5.36,0,0,0-5.36,5.36h0V220a5.36,5.36,0,0,0,5.36,5.36H195.37a8,8,0,0,0,7.95-8V200.71h-9.77v9.71h-9.94v-9.71h-8.28V214.9a5.19,5.19,0,0,0-1.41-.22H165.4v-14h-8.29v9.71h-9.93v-9.71H138.9v9.71H129v-9.71h-9.77v14H62V84.06h58.26c-5.24,15.18-4.64,36.07,11.1,63.86v.61h-29.1a14.05,14.05,0,1,0-.7,5.36h29.83v10.59h65.52V136.81H135.25C138,120.48,146,95.56,169.6,85.12Zm-81.3,73a8.7,8.7,0,1,1,8.7-8.7h0A8.7,8.7,0,0,1,88.3,158.12Zm48.45-16h54.8v17h-54.8Z" style="fill:currentColor"></path>
+    </svg>
+    <svg id="svg-user" data-name="svg-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <title>svg-user</title>
+      <path d="M229.8,224.53c0-51.13-23.79-85.95-65.23-98.32a61.47,61.47,0,1,0-73.14,0C50,138.58,26.2,173.4,26.2,224.53a1.88,1.88,0,0,1,0,.58,15.22,15.22,0,0,0,11.16,14.75,16.32,16.32,0,0,0,5,.78,15.33,15.33,0,0,0,2.79-.26H210.9a15.33,15.33,0,0,0,2.79.26,16,16,0,0,0,4.95-.78,15.22,15.22,0,0,0,11.16-14.75,1.88,1.88,0,0,1,0-.58ZM128,47.58A29.26,29.26,0,1,1,98.74,76.84h0A29.28,29.28,0,0,1,128,47.58Zm0,105.86c41.1,0,64.14,19,68.71,56.4H59.29C63.86,172.4,86.9,153.44,128,153.44Z" style="fill:currentColor"></path>
+    </svg>
+    <svg id="svg-logo" data-name="svg-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1692.9 341.5">
+      <defs>
+        <clippath id="clip-path">
+          <rect x="201.09" y="179.71" width="125.4" height="38.1" transform="translate(-61.81 143.29) rotate(-27.33)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-4">
+          <rect x="183.81" y="159.85" width="125.4" height="38.1" transform="translate(-42.02 276.49) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-5">
+          <rect x="184.67" y="160.84" width="125.4" height="38.1" transform="translate(-42.46 277.61) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-6">
+          <rect x="185.53" y="161.83" width="125.4" height="38.1" transform="translate(-42.91 278.74) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-7">
+          <rect x="186.4" y="162.83" width="125.4" height="38.1" transform="translate(-43.36 279.86) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-8">
+          <rect x="187.26" y="163.82" width="125.4" height="38.1" transform="translate(-43.8 280.98) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-9">
+          <rect x="188.12" y="164.82" width="125.4" height="38.1" transform="translate(-44.25 282.11) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-10">
+          <rect x="188.99" y="165.81" width="125.4" height="38.1" transform="translate(-44.7 283.23) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-11">
+          <rect x="189.85" y="166.8" width="125.4" height="38.1" transform="translate(-45.14 284.35) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-12">
+          <rect x="190.72" y="167.8" width="125.4" height="38.1" transform="translate(-45.59 285.48) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-13">
+          <rect x="191.58" y="168.79" width="125.4" height="38.1" transform="translate(-46.03 286.6) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-14">
+          <rect x="192.44" y="169.78" width="125.4" height="38.1" transform="translate(-46.48 287.72) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-15">
+          <rect x="193.31" y="170.78" width="125.4" height="38.1" transform="translate(-46.93 288.85) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-16">
+          <rect x="194.17" y="171.77" width="125.4" height="38.1" transform="translate(-47.37 289.97) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-17">
+          <rect x="195.03" y="172.76" width="125.4" height="38.1" transform="translate(-47.82 291.09) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-18">
+          <rect x="195.9" y="173.76" width="125.4" height="38.1" transform="translate(-48.27 292.21) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-19">
+          <rect x="196.76" y="174.75" width="125.4" height="38.1" transform="translate(-48.71 293.34) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-20">
+          <rect x="197.62" y="175.74" width="125.4" height="38.1" transform="translate(-49.16 294.46) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-21">
+          <rect x="198.49" y="176.74" width="125.4" height="38.1" transform="translate(-49.61 295.58) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-22">
+          <rect x="199.35" y="177.73" width="125.4" height="38.1" transform="translate(-50.05 296.71) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-23">
+          <rect x="200.21" y="178.72" width="125.4" height="38.1" transform="translate(-50.5 297.83) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-24">
+          <rect x="201.08" y="179.72" width="125.4" height="38.1" transform="translate(-50.94 298.95) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-25">
+          <rect x="201.94" y="180.71" width="125.4" height="38.1" transform="translate(-51.39 300.08) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-26">
+          <rect x="202.8" y="181.7" width="125.4" height="38.1" transform="translate(-51.84 301.2) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-27">
+          <rect x="203.67" y="182.7" width="125.4" height="38.1" transform="translate(-52.28 302.32) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-28">
+          <rect x="204.53" y="183.69" width="125.4" height="38.1" transform="translate(-52.73 303.45) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-29">
+          <rect x="205.39" y="184.68" width="125.4" height="38.1" transform="translate(-53.18 304.57) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-30">
+          <rect x="206.26" y="185.68" width="125.4" height="38.1" transform="translate(-53.62 305.69) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-31">
+          <rect x="207.12" y="186.67" width="125.4" height="38.1" transform="translate(-54.07 306.81) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-32">
+          <rect x="207.98" y="187.67" width="125.4" height="38.1" transform="translate(-54.52 307.94) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-33">
+          <rect x="208.85" y="188.66" width="125.4" height="38.1" transform="translate(-54.96 309.06) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-34">
+          <rect x="209.71" y="189.65" width="125.4" height="38.1" transform="translate(-55.41 310.18) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-35">
+          <rect x="210.57" y="190.65" width="125.4" height="38.1" transform="translate(-55.86 311.31) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-36">
+          <rect x="211.44" y="191.64" width="125.4" height="38.1" transform="translate(-56.3 312.43) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-37">
+          <rect x="212.3" y="192.63" width="125.4" height="38.1" transform="translate(-56.75 313.55) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-38">
+          <rect x="213.16" y="193.63" width="125.4" height="38.1" transform="translate(-57.19 314.68) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-39">
+          <rect x="214.03" y="194.62" width="125.4" height="38.1" transform="translate(-57.64 315.8) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-40">
+          <rect x="214.89" y="195.61" width="125.4" height="38.1" transform="translate(-58.09 316.92) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-41">
+          <rect x="215.76" y="196.61" width="125.4" height="38.1" transform="translate(-58.53 318.05) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-42">
+          <rect x="216.62" y="197.6" width="125.4" height="38.1" transform="translate(-58.98 319.17) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-43">
+          <rect x="217.48" y="198.59" width="125.4" height="38.1" transform="translate(-59.43 320.29) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-44">
+          <rect x="218.35" y="199.59" width="125.4" height="38.1" transform="translate(-59.87 321.42) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-48">
+          <path d="M412.6,116.6a87.84,87.84,0,0,0-34.5-21.4,126.21,126.21,0,0,0-192-55.5,128.32,128.32,0,0,0-26,25.5,103.58,103.58,0,0,0-12.5-.8,101.57,101.57,0,0,0-13.8,202.2,53.56,53.56,0,0,1-1.4-41.9,60.63,60.63,0,1,1,47.4-110.1,85.24,85.24,0,0,1,165.6,17.2c1.5-.1,3.1-.2,4.6-.2a47.49,47.49,0,0,1,4.1,94.8H319.2v41h36.7l1.8-.2a88.33,88.33,0,0,0,54.9-150.6Z" style="fill:none"></path>
+        </clippath>
+      </defs>
+      <title>easyEDAlogo</title>
+      <path d="M793.3,143.8a53.06,53.06,0,0,0-19.4-18.6c-7.8-4.3-20.3-6.4-29.6-6.4A76.58,76.58,0,0,0,704.6,130a82.15,82.15,0,0,0-30.3,31.3A85.42,85.42,0,0,0,663,203.6q0,29.1,17.6,51.1c11.7,14.6,27.6,21.9,47.5,21.9a59.88,59.88,0,0,0,23.4-4.4c7-2.9,14.4-8.1,22.5-15.6l-2.2,16.1h36.5l15.1-126.6H794.7Zm-15.6,75c-4.6,8.6-10.3,15-17,19a45.92,45.92,0,0,1-23.7,6.1c-10.9,0-19.9-3.6-26.8-10.8s-10.4-16.6-10.4-28.4c0-15.3,4.6-27.7,13.7-37.4s20.3-14.5,33.5-14.5c11.3,0,20.4,3.6,27.3,10.9s10.3,16.8,10.3,28.7A58.06,58.06,0,0,1,777.7,218.8Z" style="fill:currentColor"></path>
+      <path d="M894.9,155a13.28,13.28,0,0,1,8.4-2.8c4.3,0,9,1.6,14,4.8s9.7,8.1,14.3,14.8l17.6-28.1a57.06,57.06,0,0,0-20.4-18.4,55,55,0,0,0-25.9-6.5c-13,0-24.2,4-33.7,11.9s-14.3,18.2-14.3,30.8c0,9,3,17.6,9.1,25.7,4.3,5.8,12.2,12.7,23.6,20.8,9.8,7,15.9,11.8,18.1,14.6s3.3,5.4,3.3,7.9a10.29,10.29,0,0,1-4.3,8.3c-2.9,2.3-6.8,3.5-11.7,3.5-12.2,0-23.5-6.8-33.8-20.4l-22.8,26.5c10.1,10.8,19.3,18.2,27.5,22.2a61.92,61.92,0,0,0,27.4,6.1c17.4,0,30.7-5,39.8-14.9s13.7-20.5,13.7-31.6a43.37,43.37,0,0,0-6.7-23.5c-4.5-7.2-13.8-15.9-27.9-26-8.9-6.3-14.2-10.6-15.9-12.8a10.6,10.6,0,0,1-2.8-6.6A7.81,7.81,0,0,1,894.9,155Z" style="fill:currentColor"></path>
+      <polygon points="1033.4 211.8 1004.2 122.7 968 122.7 1010.3 252.3 967.7 327.8 1006.6 327.8 1124.5 122.7 1084.8 122.7 1033.4 211.8" style="fill:currentColor"></polygon>
+      <path d="M642.1,147.9H570.9l5.8-42.1,75.9-.1a18,18,0,0,0,0-36H543l-27.7,203H629.7a17.75,17.75,0,0,0-.4-35.5l-71,.1,7.5-53.8,73.1.1a18.05,18.05,0,0,0,18-18A17.68,17.68,0,0,0,642.1,147.9Z" style="fill:currentColor"></path>
+      <path d="M1255,147.9h-71.2l5.8-42.1,75.9-.1a18,18,0,0,0,0-36H1155.9l-27.7,203h114.5a17.75,17.75,0,0,0-.4-35.5l-71,.1,7.5-53.8,73.1.1a18.05,18.05,0,0,0,18-18A17.86,17.86,0,0,0,1255,147.9Z" style="fill:currentColor"></path>
+      <path d="M1420.4,80.5q-22.05-10.65-67.3-10.7h-32.2l-27.7,203h63.1q39.75,0,62.1-11.8c14.9-7.9,27.3-20.4,37-37.5a112.06,112.06,0,0,0,14.7-56.5q0-30-13.8-52.8C1447,98.9,1435.1,87.7,1420.4,80.5Zm-.3,128.4a60.16,60.16,0,0,1-29.2,23.6c-8.6,3.2-22.6,4.8-41.9,4.8h-12.5l17.9-131.8h9.6c15.6,0,28.2,2.5,37.6,7.4a52.79,52.79,0,0,1,21.9,21c5.2,9.1,7.8,20.3,7.8,33.7C1431.1,184.1,1427.5,197.8,1420.1,208.9Z" style="fill:currentColor"></path>
+      <path d="M1620,164.7l-22.6,12.4a32.81,32.81,0,1,1-32.6-36.6,32.47,32.47,0,0,1,18.7,5.9l28-15.4-15.2-60.9h-32L1455.1,272.2h40.8l23-43h80.2l10.7,43h36.8Z" style="fill:currentColor"></path>
+      <path d="M1578.3,172.6a12.7,12.7,0,1,1-12.7-12.7A12.72,12.72,0,0,1,1578.3,172.6Z" style="fill:currentColor"></path>
+      <rect id="SVGID" x="201.09" y="179.71" width="125.4" height="38.1" transform="translate(-61.81 143.29) rotate(-27.33)" style="fill:currentColor"></rect>
+      <g style="clip-path:url(#clip-path)">
+        <polygon points="199.4 210.6 216.9 244.5 199.4 244.5 199.4 210.6" style="fill:currentColor"></polygon>
+      </g>
+      <g style="clip-path:url(#clip-path)">
+        <polygon points="199.4 208.8 201.1 207.9 220 244.5 216.9 244.5 199.4 210.6 199.4 208.8" style="fill:currentColor"></polygon>
+      </g>
+      <g style="clip-path:url(#clip-path)">
+        <polygon points="201.1 207.9 203.6 206.6 222.6 243.4 220.4 244.5 220 244.5 201.1 207.9" style="fill:currentColor"></polygon>
+      </g>
+      <g style="clip-path:url(#clip-path-4)">
+        <rect x="212.92" y="203.7" width="2.8" height="41.4" transform="translate(-79.1 123.44) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-5)">
+        <rect x="215.41" y="202.39" width="2.8" height="41.4" transform="translate(-78.22 124.43) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-6)">
+        <rect x="217.89" y="201.08" width="2.8" height="41.4" transform="translate(-77.34 125.43) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-7)">
+        <rect x="220.29" y="199.82" width="2.8" height="41.4" transform="translate(-76.49 126.39) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-8)">
+        <rect x="222.83" y="198.6" width="2.8" height="41.4" transform="translate(-75.65 127.42) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-9)">
+        <rect x="225.31" y="197.29" width="2.8" height="41.4" transform="translate(-74.77 128.41) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-10)">
+        <rect x="227.8" y="195.98" width="2.8" height="41.4" transform="translate(-73.89 129.41) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-11)">
+        <rect x="230.2" y="194.72" width="2.8" height="41.4" transform="translate(-73.05 130.37) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-12)">
+        <rect x="232.69" y="193.41" width="2.8" height="41.4" transform="translate(-72.17 131.36) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-13)">
+        <rect x="235.22" y="192.19" width="2.8" height="41.4" transform="translate(-71.33 132.39) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-14)">
+        <rect x="237.71" y="190.88" width="2.8" height="41.4" transform="translate(-70.45 133.39) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-15)">
+        <rect x="240.11" y="189.61" width="2.8" height="41.4" transform="translate(-69.6 134.35) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-16)">
+        <rect x="242.59" y="188.3" width="2.8" height="41.4" transform="translate(-68.72 135.34) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-17)">
+        <rect x="245.13" y="187.08" width="2.8" height="41.4" transform="translate(-67.88 136.37) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-18)">
+        <rect x="247.53" y="185.82" width="2.8" height="41.4" transform="translate(-67.03 137.33) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-19)">
+        <rect x="250.01" y="184.51" width="2.8" height="41.4" transform="translate(-66.15 138.33) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-20)">
+        <rect x="252.5" y="183.2" width="2.8" height="41.4" transform="translate(-65.27 139.32) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-21)">
+        <rect x="254.99" y="181.89" width="2.8" height="41.4" transform="translate(-64.39 140.32) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-22)">
+        <rect x="257.43" y="180.72" width="2.8" height="41.4" transform="translate(-63.58 141.31) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-23)">
+        <rect x="259.92" y="179.41" width="2.8" height="41.4" transform="translate(-62.7 142.31) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-24)">
+        <rect x="262.41" y="178.1" width="2.8" height="41.4" transform="translate(-61.82 143.3) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-25)">
+        <rect x="264.9" y="176.79" width="2.8" height="41.4" transform="translate(-60.95 144.3) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-26)">
+        <rect x="267.3" y="175.53" width="2.8" height="41.4" transform="translate(-60.1 145.26) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-27)">
+        <rect x="269.83" y="174.31" width="2.8" height="41.4" transform="translate(-59.25 146.29) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-28)">
+        <rect x="272.32" y="173" width="2.8" height="41.4" transform="translate(-58.38 147.28) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-29)">
+        <rect x="274.8" y="171.69" width="2.8" height="41.4" transform="translate(-57.5 148.28) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-30)">
+        <rect x="277.2" y="170.43" width="2.8" height="41.4" transform="translate(-56.65 149.24) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-31)">
+        <rect x="279.69" y="169.12" width="2.8" height="41.4" transform="translate(-55.77 150.23) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-32)">
+        <rect x="282.22" y="167.9" width="2.8" height="41.4" transform="translate(-54.93 151.26) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-33)">
+        <rect x="284.71" y="166.59" width="2.8" height="41.4" transform="translate(-54.05 152.26) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-34)">
+        <rect x="287.11" y="165.32" width="2.8" height="41.4" transform="translate(-53.2 153.22) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-35)">
+        <rect x="289.6" y="164.01" width="2.8" height="41.4" transform="translate(-52.32 154.21) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-36)">
+        <rect x="292.09" y="162.71" width="2.8" height="41.4" transform="translate(-51.44 155.21) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-37)">
+        <rect x="294.62" y="161.49" width="2.8" height="41.4" transform="translate(-50.6 156.24) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-38)">
+        <rect x="297.02" y="160.22" width="2.8" height="41.4" transform="translate(-49.75 157.2) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-39)">
+        <rect x="299.51" y="158.91" width="2.8" height="41.4" transform="translate(-48.87 158.19) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-40)">
+        <rect x="301.99" y="157.6" width="2.8" height="41.4" transform="translate(-48 159.19) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-41)">
+        <rect x="304.53" y="156.38" width="2.8" height="41.4" transform="translate(-47.15 160.21) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-42)">
+        <rect x="306.93" y="155.12" width="2.8" height="41.4" transform="translate(-46.31 161.17) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-43)">
+        <rect x="309.41" y="153.81" width="2.8" height="41.4" transform="translate(-45.43 162.17) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-44)">
+        <rect x="311.9" y="152.5" width="2.8" height="41.4" transform="translate(-44.55 163.17) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path)">
+        <polygon points="305 154.2 307.2 153.1 307.6 153.1 326.5 189.7 324 190.9 305 154.2" style="fill:currentColor"></polygon>
+      </g>
+      <g style="clip-path:url(#clip-path)">
+        <polygon points="310.7 153.1 328.2 186.9 328.2 188.8 326.5 189.7 307.6 153.1 310.7 153.1" style="fill:currentColor"></polygon>
+      </g>
+      <g style="clip-path:url(#clip-path)">
+        <polygon points="328.2 186.9 310.7 153.1 328.2 153.1 328.2 186.9" style="fill:currentColor"></polygon>
+      </g>
+      <path d="M172.7,305.3a61.5,61.5,0,1,1,61.5-61.5A61.58,61.58,0,0,1,172.7,305.3Zm0-90.1a28.7,28.7,0,1,0,28.7,28.7A28.76,28.76,0,0,0,172.7,215.2Z" style="fill:currentColor"></path>
+      <path id="SVGID-2" data-name="SVGID" d="M412.6,116.6a87.84,87.84,0,0,0-34.5-21.4,126.21,126.21,0,0,0-192-55.5,128.32,128.32,0,0,0-26,25.5,103.58,103.58,0,0,0-12.5-.8,101.57,101.57,0,0,0-13.8,202.2,53.56,53.56,0,0,1-1.4-41.9,60.63,60.63,0,1,1,47.4-110.1,85.24,85.24,0,0,1,165.6,17.2c1.5-.1,3.1-.2,4.6-.2a47.49,47.49,0,0,1,4.1,94.8H319.2v41h36.7l1.8-.2a88.33,88.33,0,0,0,54.9-150.6Z" style="fill:currentColor"></path>
+    </svg>
+    <svg id="svg-logo-cn" data-name="svg-logo-cn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1692.9 341.5">
+      <defs>
+        <clippath id="clip-path">
+          <rect x="275.4" y="190.18" width="125.4" height="38.1" transform="translate(-58.32 178.57) rotate(-27.33)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-4">
+          <rect x="258.13" y="170.3" width="125.4" height="38.1" transform="translate(-19.21 341.52) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-5">
+          <rect x="258.99" y="171.29" width="125.4" height="38.1" transform="translate(-19.66 342.64) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-6">
+          <rect x="259.86" y="172.28" width="125.4" height="38.1" transform="translate(-20.1 343.77) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-7">
+          <rect x="260.72" y="173.28" width="125.4" height="38.1" transform="translate(-20.55 344.89) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-8">
+          <rect x="261.58" y="174.27" width="125.4" height="38.1" transform="translate(-21 346.01) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-9">
+          <rect x="262.45" y="175.26" width="125.4" height="38.1" transform="translate(-21.44 347.14) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-10">
+          <rect x="263.31" y="176.26" width="125.4" height="38.1" transform="translate(-21.89 348.26) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-11">
+          <rect x="264.17" y="177.25" width="125.4" height="38.1" transform="translate(-22.34 349.38) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-12">
+          <rect x="265.04" y="178.25" width="125.4" height="38.1" transform="translate(-22.78 350.5) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-13">
+          <rect x="265.9" y="179.24" width="125.4" height="38.1" transform="translate(-23.23 351.63) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-14">
+          <rect x="266.76" y="180.23" width="125.4" height="38.1" transform="translate(-23.68 352.75) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-15">
+          <rect x="267.63" y="181.23" width="125.4" height="38.1" transform="translate(-24.12 353.87) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-16">
+          <rect x="268.49" y="182.22" width="125.4" height="38.1" transform="translate(-24.57 355) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-17">
+          <rect x="269.35" y="183.21" width="125.4" height="38.1" transform="translate(-25.01 356.12) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-18">
+          <rect x="270.22" y="184.21" width="125.4" height="38.1" transform="translate(-25.46 357.24) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-19">
+          <rect x="271.08" y="185.2" width="125.4" height="38.1" transform="translate(-25.91 358.37) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-20">
+          <rect x="271.94" y="186.19" width="125.4" height="38.1" transform="translate(-26.35 359.49) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-21">
+          <rect x="272.81" y="187.19" width="125.4" height="38.1" transform="translate(-26.8 360.61) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-22">
+          <rect x="273.67" y="188.18" width="125.4" height="38.1" transform="translate(-27.25 361.74) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-23">
+          <rect x="274.53" y="189.17" width="125.4" height="38.1" transform="translate(-27.69 362.86) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-24">
+          <rect x="275.4" y="190.17" width="125.4" height="38.1" transform="translate(-28.14 363.98) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-25">
+          <rect x="276.26" y="191.16" width="125.4" height="38.1" transform="translate(-28.59 365.11) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-26">
+          <rect x="277.12" y="192.15" width="125.4" height="38.1" transform="translate(-29.03 366.23) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-27">
+          <rect x="277.99" y="193.15" width="125.4" height="38.1" transform="translate(-29.48 367.35) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-28">
+          <rect x="278.85" y="194.14" width="125.4" height="38.1" transform="translate(-29.93 368.47) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-29">
+          <rect x="279.71" y="195.13" width="125.4" height="38.1" transform="translate(-30.37 369.6) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-30">
+          <rect x="280.58" y="196.13" width="125.4" height="38.1" transform="translate(-30.82 370.72) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-31">
+          <rect x="281.44" y="197.12" width="125.4" height="38.1" transform="translate(-31.26 371.84) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-32">
+          <rect x="282.31" y="198.11" width="125.4" height="38.1" transform="translate(-31.71 372.97) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-33">
+          <rect x="283.17" y="199.11" width="125.4" height="38.1" transform="translate(-32.16 374.09) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-34">
+          <rect x="284.03" y="200.1" width="125.4" height="38.1" transform="translate(-32.6 375.21) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-35">
+          <rect x="284.9" y="201.1" width="125.4" height="38.1" transform="translate(-33.05 376.34) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-36">
+          <rect x="285.76" y="202.09" width="125.4" height="38.1" transform="translate(-33.5 377.46) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-37">
+          <rect x="286.62" y="203.08" width="125.4" height="38.1" transform="translate(-33.94 378.58) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-38">
+          <rect x="287.49" y="204.08" width="125.4" height="38.1" transform="translate(-34.39 379.71) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-39">
+          <rect x="288.35" y="205.07" width="125.4" height="38.1" transform="translate(-34.84 380.83) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-40">
+          <rect x="289.21" y="206.06" width="125.4" height="38.1" transform="translate(-35.28 381.95) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-41">
+          <rect x="290.08" y="207.06" width="125.4" height="38.1" transform="translate(-35.73 383.07) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-42">
+          <rect x="290.94" y="208.05" width="125.4" height="38.1" transform="translate(-36.18 384.2) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-43">
+          <rect x="291.8" y="209.04" width="125.4" height="38.1" transform="translate(-36.62 385.32) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-44">
+          <rect x="292.67" y="210.04" width="125.4" height="38.1" transform="translate(-37.07 386.44) rotate(-54.66)" style="fill:none"></rect>
+        </clippath>
+        <clippath id="clip-path-48">
+          <path d="M486.9,127a87.84,87.84,0,0,0-34.5-21.4,126.21,126.21,0,0,0-192-55.5,128.32,128.32,0,0,0-26,25.5,103.58,103.58,0,0,0-12.5-.8A101.57,101.57,0,0,0,208.1,277a53.56,53.56,0,0,1-1.4-41.9A60.63,60.63,0,1,1,254.1,125a85.24,85.24,0,0,1,165.6,17.2c1.5-.1,3.1-.2,4.6-.2a47.49,47.49,0,0,1,4.1,94.8H393.5v41h36.7l1.8-.2A88.33,88.33,0,0,0,486.9,127Z" style="fill:none"></path>
+        </clippath>
+      </defs>
+      <title>svg-logo-cn</title>
+      <path d="M1159.1,159h-69.4l5.7-41.1,74-.1a17.6,17.6,0,0,0,0-35.2H1062.5l-27.1,198H1147a17.3,17.3,0,0,0-.3-34.6l-69.2.1,7.3-52.5,71.3.1a17.47,17.47,0,0,0,3-34.7Z" style="fill:currentColor"></path>
+      <path d="M1320.3,93.2c-14.3-7-36.2-10.4-65.6-10.4h-31.4l-27,198h61.5q38.7,0,60.6-11.5c14.5-7.7,26.6-19.9,36.1-36.6s14.3-35.1,14.3-55.1c0-19.5-4.5-36.6-13.5-51.5S1334.7,100.2,1320.3,93.2Zm-.2,125.3a58.28,58.28,0,0,1-28.5,23c-8.4,3.1-22,4.7-40.9,4.7h-12.2l17.4-128.5h9.4c15.3,0,27.5,2.4,36.7,7.2a50.76,50.76,0,0,1,21.3,20.5c5,8.8,7.6,19.8,7.6,32.9C1330.8,194.2,1327.3,207.6,1320.1,218.5Z" style="fill:currentColor"></path>
+      <path d="M763,120.6H607.6a11.42,11.42,0,0,1-8.9-3.9,11.22,11.22,0,0,1-2.3-9.3v-.2a14,14,0,0,1,13.7-11.6h65.8l2.9-16.3c1.1-6.3,7.4-11.6,13.7-11.6h.4a11.39,11.39,0,0,1,8.7,4,11.59,11.59,0,0,1,2.5,9.5l-2.5,14.5h63.9a11,11,0,0,1,11.2,13.5v.2A14.24,14.24,0,0,1,763,120.6Z" style="fill:currentColor"></path>
+      <path d="M702.6,252.9h0a11.7,11.7,0,0,1-3.2-.4l-1.3-.3a11,11,0,0,1-6.4-6.3,12.08,12.08,0,0,1,.5-10c14.1-27.6,27-58.9,39.4-95.6a14,14,0,0,1,13-9.6,9.15,9.15,0,0,1,1.6.1h.7l.4.1a10.85,10.85,0,0,1,7.7,5,12.52,12.52,0,0,1,1.2,10.1l-.1.3c-12.7,37.1-26.2,69.6-41.2,99.1A14.29,14.29,0,0,1,702.6,252.9Z" style="fill:currentColor"></path>
+      <path d="M747.6,283.5H568.8a11.36,11.36,0,0,1-8.8-3.9,11.81,11.81,0,0,1-2.4-9.5l.1-.7a14.38,14.38,0,0,1,13.7-11.6H750.2a11,11,0,0,1,8.5,3.9,11.72,11.72,0,0,1,2.5,9.6l-.1.7C759.9,278.4,754,283.5,747.6,283.5Z" style="fill:currentColor"></path>
+      <path d="M624.5,252.7h0a11.36,11.36,0,0,1-11.6-10.1v-.3l-6-97.1c-.6-6.6,4.2-12.9,11-14.4l.6-.1h.6a10.68,10.68,0,0,1,2.5-.3,11.28,11.28,0,0,1,11.3,10v.3l5.8,97.4a14.28,14.28,0,0,1-11,14.2l-.3.1A15,15,0,0,1,624.5,252.7Z" style="fill:currentColor"></path>
+      <path d="M927.3,153.4h0a10.8,10.8,0,0,1-10.8-8.2l-12.3-41.4a9,9,0,0,0-2.7-4.1c-.8-.7-2.6-1-5-1h-36a12.25,12.25,0,0,0-6.3,1.4,17.4,17.4,0,0,0-5,5.1l-.1.2c-5.1,7.7-10.3,15.6-15.5,23.8l-.4.7c-3.7,5.6-7.5,11.3-11.2,16.8a13.9,13.9,0,0,1-11.7,6.7,13.07,13.07,0,0,1-5.5-1.3l-3.3-2.8a9.5,9.5,0,0,1-2.1-3.8,12.64,12.64,0,0,1,1.6-10.6l.1-.1,27.2-41.6a42.9,42.9,0,0,1,14.6-15c5.4-3.3,12.2-4.9,20.3-4.9h36c8.4,0,14.9,1.6,19.8,4.8l.4.3c4.2,3.4,7.4,8.8,9.8,16v.1l12.2,41.6c1.6,6.2-2,13.3-8,15.9l-.5.2A14.12,14.12,0,0,1,927.3,153.4Z" style="fill:currentColor"></path>
+      <path d="M937.2,250.8h-.4a11.75,11.75,0,0,1-8.8-4,11.45,11.45,0,0,1-2.4-9.5l22.7-128.8A14.38,14.38,0,0,1,962,96.9h.4a11.36,11.36,0,0,1,8.8,3.9,11.81,11.81,0,0,1,2.4,9.5L950.9,239.1A14.11,14.11,0,0,1,937.2,250.8Z" style="fill:currentColor"></path>
+      <path d="M899.5,285.9H818.7a24.61,24.61,0,0,1-12.5-3,25.62,25.62,0,0,1-14.6-17.8,28.72,28.72,0,0,1-.4-12.8l13.4-76.2a33.5,33.5,0,0,1,11.5-19.5c6.3-5.3,13.8-8.3,21.3-8.3h60a23.86,23.86,0,0,1,23.8,18.5,24.15,24.15,0,0,1,.5,11.1L916,210.2a30.2,30.2,0,0,1-4.3,11.1c-6.3,10.3-17.1,16.7-28.2,16.7H853.4a11.28,11.28,0,0,1-11.2-13.3l.1-.7A14.38,14.38,0,0,1,856,212.4h30.1a4.69,4.69,0,0,0,4.5-4.1l5.7-32.3c.2-1.3,0-1.5-.2-1.8l-.3-.3a4,4,0,0,0-1.1-.1h-60c-1.6,0-2.2.3-2.8.9l-.4.4a4,4,0,0,0-1.7,2.8l-13.4,76.2c-.4,2.5.3,3.6.8,4.2l.2.2a4.9,4.9,0,0,0,4,1.8h80.8a11.12,11.12,0,0,1,8.8,4,11.81,11.81,0,0,1,2.4,9.5l-.1.4A14.21,14.21,0,0,1,899.5,285.9Z" style="fill:currentColor"></path>
+      <path d="M947.1,285.9H929.6a11.75,11.75,0,0,1-8.8-4,11.45,11.45,0,0,1-2.4-9.5l.1-.4a14.3,14.3,0,0,1,13.7-11.6h17.5a8,8,0,0,0,5.5-2.2,11.49,11.49,0,0,0,3.3-5.8L987.3,89.1A14.2,14.2,0,0,1,1001,77.5h.2a11.75,11.75,0,0,1,8.8,4,11.45,11.45,0,0,1,2.4,9.5L983.6,254.3a38.23,38.23,0,0,1-23.4,28.9A31.66,31.66,0,0,1,947.1,285.9Z" style="fill:currentColor"></path>
+      <path d="M1517.1,175.4,1495,187.6a32.11,32.11,0,1,1-31.9-35.8,31.38,31.38,0,0,1,18.3,5.8l27.4-15.1-14.9-59.6h-31.4l-106.9,198h40l22.5-42.1h78.5l10.5,42.1h36.1Z" style="fill:currentColor"></path>
+      <circle cx="1463.9" cy="183.1" r="12.4" style="fill:currentColor"></circle>
+      <rect id="SVGID" x="275.4" y="190.18" width="125.4" height="38.1" transform="translate(-58.32 178.57) rotate(-27.33)" style="fill:currentColor"></rect>
+      <g style="clip-path:url(#clip-path)">
+        <polygon points="273.6 221.1 291.1 254.9 273.6 254.9 273.6 221.1" style="fill:currentColor"></polygon>
+      </g>
+      <g style="clip-path:url(#clip-path)">
+        <polygon points="273.6 219.3 275.3 218.4 294.2 254.9 291.1 254.9 273.6 221.1 273.6 219.3" style="fill:currentColor"></polygon>
+      </g>
+      <g style="clip-path:url(#clip-path)">
+        <polygon points="275.3 218.4 277.8 217.1 296.8 253.8 294.7 254.9 294.2 254.9 275.3 218.4" style="fill:currentColor"></polygon>
+      </g>
+      <g style="clip-path:url(#clip-path-4)">
+        <rect x="287.19" y="214.09" width="2.8" height="41.4" transform="translate(-75.58 158.69) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-5)">
+        <rect x="289.63" y="212.91" width="2.8" height="41.4" transform="translate(-74.77 159.69) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-6)">
+        <rect x="292.12" y="211.6" width="2.8" height="41.4" transform="translate(-73.89 160.68) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-7)">
+        <rect x="294.61" y="210.3" width="2.8" height="41.4" transform="translate(-73.01 161.68) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-8)">
+        <rect x="297.1" y="208.99" width="2.8" height="41.4" transform="translate(-72.13 162.67) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-9)">
+        <rect x="299.5" y="207.72" width="2.8" height="41.4" transform="translate(-71.28 163.63) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-10)">
+        <rect x="302.03" y="206.5" width="2.8" height="41.4" transform="translate(-70.44 164.66) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-11)">
+        <rect x="304.52" y="205.19" width="2.8" height="41.4" transform="translate(-69.56 165.66) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-12)">
+        <rect x="307" y="203.88" width="2.8" height="41.4" transform="translate(-68.68 166.65) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-13)">
+        <rect x="309.4" y="202.62" width="2.8" height="41.4" transform="translate(-67.84 167.61) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-14)">
+        <rect x="311.89" y="201.31" width="2.8" height="41.4" transform="translate(-66.96 168.61) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-15)">
+        <rect x="314.42" y="200.09" width="2.8" height="41.4" transform="translate(-66.11 169.64) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-16)">
+        <rect x="316.91" y="198.78" width="2.8" height="41.4" transform="translate(-65.24 170.63) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-17)">
+        <rect x="319.31" y="197.52" width="2.8" height="41.4" transform="translate(-64.39 171.59) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-18)">
+        <rect x="321.8" y="196.21" width="2.8" height="41.4" transform="translate(-63.51 172.59) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-19)">
+        <rect x="324.29" y="194.9" width="2.8" height="41.4" transform="translate(-62.63 173.58) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-20)">
+        <rect x="326.82" y="193.68" width="2.8" height="41.4" transform="translate(-61.79 174.61) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-21)">
+        <rect x="329.22" y="192.42" width="2.8" height="41.4" transform="translate(-60.94 175.57) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-22)">
+        <rect x="331.71" y="191.11" width="2.8" height="41.4" transform="translate(-60.06 176.57) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-23)">
+        <rect x="334.19" y="189.8" width="2.8" height="41.4" transform="translate(-59.18 177.56) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-24)">
+        <rect x="336.73" y="188.58" width="2.8" height="41.4" transform="translate(-58.34 178.59) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-25)">
+        <rect x="339.13" y="187.31" width="2.8" height="41.4" transform="translate(-57.49 179.55) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-26)">
+        <rect x="341.61" y="186.01" width="2.8" height="41.4" transform="translate(-56.61 180.55) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-27)">
+        <rect x="344.1" y="184.7" width="2.8" height="41.4" transform="translate(-55.73 181.54) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-28)">
+        <rect x="346.59" y="183.39" width="2.8" height="41.4" transform="translate(-54.86 182.54) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-29)">
+        <rect x="349.03" y="182.21" width="2.8" height="41.4" transform="translate(-54.04 183.53) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-30)">
+        <rect x="351.52" y="180.9" width="2.8" height="41.4" transform="translate(-53.16 184.52) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-31)">
+        <rect x="354.01" y="179.59" width="2.8" height="41.4" transform="translate(-52.29 185.52) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-32)">
+        <rect x="356.5" y="178.28" width="2.8" height="41.4" transform="translate(-51.41 186.52) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-33)">
+        <rect x="358.89" y="177.02" width="2.8" height="41.4" transform="translate(-50.56 187.48) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-34)">
+        <rect x="361.43" y="175.8" width="2.8" height="41.4" transform="translate(-49.72 188.5) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-35)">
+        <rect x="363.92" y="174.49" width="2.8" height="41.4" transform="translate(-48.84 189.5) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-36)">
+        <rect x="366.4" y="173.18" width="2.8" height="41.4" transform="translate(-47.96 190.5) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-37)">
+        <rect x="368.8" y="171.92" width="2.8" height="41.4" transform="translate(-47.11 191.46) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-38)">
+        <rect x="371.29" y="170.61" width="2.8" height="41.4" transform="translate(-46.23 192.45) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-39)">
+        <rect x="373.82" y="169.39" width="2.8" height="41.4" transform="translate(-45.39 193.48) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-40)">
+        <rect x="376.31" y="168.08" width="2.8" height="41.4" transform="translate(-44.51 194.47) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-41)">
+        <rect x="378.71" y="166.82" width="2.8" height="41.4" transform="translate(-43.66 195.44) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-42)">
+        <rect x="381.2" y="165.51" width="2.8" height="41.4" transform="translate(-42.78 196.43) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-43)">
+        <rect x="383.73" y="164.29" width="2.8" height="41.4" transform="translate(-41.94 197.46) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path-44)">
+        <rect x="386.22" y="162.98" width="2.8" height="41.4" transform="translate(-41.06 198.45) rotate(-27.33)" style="fill:currentColor"></rect>
+      </g>
+      <g style="clip-path:url(#clip-path)">
+        <polygon points="379.3 164.6 381.4 163.5 381.9 163.5 400.8 200.1 398.3 201.4 379.3 164.6" style="fill:currentColor"></polygon>
+      </g>
+      <g style="clip-path:url(#clip-path)">
+        <polygon points="385 163.5 402.5 197.4 402.5 199.2 400.8 200.1 381.9 163.5 385 163.5" style="fill:currentColor"></polygon>
+      </g>
+      <g style="clip-path:url(#clip-path)">
+        <polygon points="402.5 197.4 385 163.5 402.5 163.5 402.5 197.4" style="fill:currentColor"></polygon>
+      </g>
+      <path d="M247,315.8a61.5,61.5,0,1,1,61.5-61.5A61.58,61.58,0,0,1,247,315.8Zm0-90.2a28.7,28.7,0,1,0,28.7,28.7A28.76,28.76,0,0,0,247,225.6Z" style="fill:currentColor"></path>
+      <path id="SVGID-2" data-name="SVGID" d="M486.9,127a87.84,87.84,0,0,0-34.5-21.4,126.21,126.21,0,0,0-192-55.5,128.32,128.32,0,0,0-26,25.5,103.58,103.58,0,0,0-12.5-.8A101.57,101.57,0,0,0,208.1,277a53.56,53.56,0,0,1-1.4-41.9A60.63,60.63,0,1,1,254.1,125a85.24,85.24,0,0,1,165.6,17.2c1.5-.1,3.1-.2,4.6-.2a47.49,47.49,0,0,1,4.1,94.8H393.5v41h36.7l1.8-.2A88.33,88.33,0,0,0,486.9,127Z" style="fill:currentColor"></path>
+    </svg>
+    <svg id="svg-double-arrow" data-name="svg-double-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+      <title>svg-double-arrow</title>
+      <polygon points="230.61 129.4 146 30.4 146 228.4 230.61 129.4" style="fill:currentColor"></polygon>
+      <polygon points="127.23 129.4 42.62 30.4 42.62 228.4 127.23 129.4" style="fill:currentColor"></polygon>
+    </svg>
+  </svg>
+</div>
+
+<div class="priv-tips" style="display: block;">
+  <div class="tips-content">
+    <div class="tips-text">We use cookies to offer you a better experience. Detailed information on the use of cookies on this website is provided in our <a class="text-bold" href="https://easyeda.com/page/privacy">Privacy Policy</a>. By using this site, you consent to the use of our cookies. </div>
+    <button class="tips-close"><svg t="1503649282969" class="icon" style="
+      width: 40px;
+      height: 40px;
+      color: #fff;
+  " viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2120" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200">
+        <defs>
+          <style type="text/css"></style>
+        </defs>
+        <path d="M512 0c282.7776 0 512 229.2224 512 512s-229.2224 512-512 512S0 794.7776 0 512 229.2224 0 512 0z m0 457.7024l-190.08-190.08-54.272 54.2976L457.6768 512l-190.08 190.08 54.2976 54.272L512 566.3232l190.08 190.08 54.272-54.2976L566.3232 512l190.08-190.08-54.2976-54.272L512 457.6768z">
+        </path>
+      </svg></button>
+  </div>
+</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./ILI9341 Backlight PWM control - EasyEDA_files/manifest.js.download"></script>
+  <script src="./ILI9341 Backlight PWM control - EasyEDA_files/vendor.js.download"></script><div class="tui-tooltip" style="display: none;"><div class="arrow"></div><span class="text"></span></div>
+      <script src="./ILI9341 Backlight PWM control - EasyEDA_files/home-project-detail.js.download"></script>
+  
+
+</body></html>

@@ -23,7 +23,7 @@
 #include "generated/gui_guider.h"
 
 #define SD_CS 5
-
+#define power_off 17
 volatile bool BuzzerPrevMillisSet = true;
 volatile bool buzzerON = false;
 volatile uint32_t BuzzerCurrentMillis = 0;
@@ -152,6 +152,8 @@ bool my_touchpad_read(lv_indev_drv_t * indev_driver, lv_indev_data_t * data)
 
 void setup() {
   // put your setup code here, to run once:
+  pinMode(power_off, OUTPUT);
+  digitalWrite(power_off, HIGH);
   init_lcd_brightness();
   Serial.begin(115200); /* prepare for possible serial debug */
   lv_init();
@@ -242,7 +244,7 @@ void setup() {
   Init_TaskBattery();
 
   WiFi.mode(WIFI_MODE_STA);
-  WiFi.begin("SETO");
+  WiFi.begin("Fahmi", "tanyadulu");
   Serial.print("Connecting.");
 
   WiFi.scanNetworks();

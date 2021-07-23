@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2021-01-07T10:09:51Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.5.2"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "Desain Hardware Fahmi Mashuri"
+        },
+        "Owner": "fahmi mashuri <fahmi.masheroit@gmail.com>",
+        "Size": {
+            "X": 64.643,
+            "Y": 56.134
+        }
+    }
+}
