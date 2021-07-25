@@ -1,7 +1,7 @@
 #ifndef __BATTERY_FUNCTION_H__
 #define __BATTERY_FUNCTION_H__
 
-#define BATTERY_PIN 35
+#define BATTERY_PIN 36
 #define BATTERY_CHARGING_PIN 26
 #define R1_BATTERY 330
 #define R2_BATTERY 1200

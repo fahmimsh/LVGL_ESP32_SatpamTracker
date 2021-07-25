@@ -244,7 +244,7 @@ void setup() {
   Init_TaskBattery();
 
   WiFi.mode(WIFI_MODE_STA);
-  WiFi.begin("Fahmi", "tanyadulu");
+  WiFi.begin("Fahmi", "tanyaduluya");
   Serial.print("Connecting.");
 
   WiFi.scanNetworks();

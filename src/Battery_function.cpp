@@ -2,14 +2,18 @@
 
 extern uint8_t stateScreen;
 
+float map(float x, float in_min, float in_max, float out_min, float out_max){
+    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
 uint8_t batteryLevel(){
   analogReadResolution(12);
   uint16_t analogInput = analogRead(BATTERY_PIN);
 
   float voltageInput = ((float)analogInput / 4096.0) * 3.3;
 
-  float voltageReal = (voltageInput) / (R2_BATTERY * (R1_BATTERY + R1_BATTERY));
-
+  //float voltageReal = (voltageInput) / (R2_BATTERY * (R1_BATTERY + R1_BATTERY));
+  float voltageReal = map(voltageInput, 0.0, 3.3, 3.7, 4.2);
   voltageReal = constrain(voltageReal, 3.7, 4.2);
   float percentageBattery = map(voltageReal, 3.7, 4.2, 0.0, 100.0);
 
@@ -17,7 +21,7 @@ uint8_t batteryLevel(){
 }
 
 void Init_TaskBattery(){
-    lv_task_t *task = lv_task_create(TaskBattery, 1000, LV_TASK_PRIO_MID, NULL);
+    lv_task_t *task = lv_task_create(TaskBattery, 10000, LV_TASK_PRIO_MID, NULL);
 }
 
 void TaskBattery(lv_task_t* task){
