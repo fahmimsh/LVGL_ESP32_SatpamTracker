@@ -262,11 +262,11 @@ void setup_scr_screen_menu_patroli(lv_ui *ui){
 	lv_style_set_pad_bottom(&style_screen_menu_patroli_bat_status_main, LV_STATE_DEFAULT, 0);
 	lv_obj_add_style(ui->screen_menu_patroli_bat_status, LV_LABEL_PART_MAIN, &style_screen_menu_patroli_bat_status_main);
 	lv_obj_set_pos(ui->screen_menu_patroli_bat_status, 381, 6);
-	lv_obj_set_size(ui->screen_menu_patroli_bat_status, 51, 0);
+	lv_obj_set_size(ui->screen_menu_patroli_bat_status, 100, 0);
 
 	//Write codes screen_menu_patroli_label_tanggal
 	ui->screen_menu_patroli_label_tanggal = lv_label_create(ui->screen_menu_patroli, NULL);
-	lv_label_set_text(ui->screen_menu_patroli_label_tanggal, "12 Juni 2021");
+	lv_label_set_text(ui->screen_menu_patroli_label_tanggal, "");
 	lv_label_set_long_mode(ui->screen_menu_patroli_label_tanggal, LV_LABEL_LONG_BREAK);
 	lv_label_set_align(ui->screen_menu_patroli_label_tanggal, LV_LABEL_ALIGN_LEFT);
 
@@ -293,7 +293,7 @@ void setup_scr_screen_menu_patroli(lv_ui *ui){
 
 	//Write codes screen_menu_patroli_label_jam
 	ui->screen_menu_patroli_label_jam = lv_label_create(ui->screen_menu_patroli, NULL);
-	lv_label_set_text(ui->screen_menu_patroli_label_jam, "18:06");
+	lv_label_set_text(ui->screen_menu_patroli_label_jam, "");
 	lv_label_set_long_mode(ui->screen_menu_patroli_label_jam, LV_LABEL_LONG_BREAK);
 	lv_label_set_align(ui->screen_menu_patroli_label_jam, LV_LABEL_ALIGN_CENTER);
 
@@ -457,9 +457,10 @@ void setup_scr_screen_menu_patroli(lv_ui *ui){
 	lv_obj_set_size(ui->screen_menu_patroli_label_lokasi, 121, 0);
 
 	//Write codes screen_menu_patroli_label_lokasi_patroli
-	httpGETLokasi();
+	const char* lokasi = httpGETLokasi();
+	
 	ui->screen_menu_patroli_label_lokasi_patroli = lv_label_create(ui->screen_menu_patroli, NULL);
-	lv_label_set_text(ui->screen_menu_patroli_label_lokasi_patroli, "");
+	lv_label_set_text(ui->screen_menu_patroli_label_lokasi_patroli, lokasi);
 	lv_label_set_long_mode(ui->screen_menu_patroli_label_lokasi_patroli, LV_LABEL_LONG_BREAK);
 	lv_label_set_align(ui->screen_menu_patroli_label_lokasi_patroli, LV_LABEL_ALIGN_LEFT);
 

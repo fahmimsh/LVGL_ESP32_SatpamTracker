@@ -123,13 +123,20 @@ void loop_nfc(){
         sprintf((char*)strBuffer, "%ul", cardid);
         lv_textarea_set_text(guider_ui.screen_set_scanid_ta_scanid, (char*)strBuffer);
      }
-    }
-
       else if(stateScreen == STATE_SCREEN_PATROLI){
         char tmp[100];
-        sprintf((char*)tmp, HTTP_RUANG, cardid, lv_list_get_btn_text(lv_list_get_btn_selected(guider_ui.screen_menu_patroli_ddlist_status)));
-        Serial.println(tmp);
+        char status_ruang[24];
+
+        lv_dropdown_get_selected_str(guider_ui.screen_menu_patroli_ddlist_status, status_ruang, 0);
+        Serial.println(String("hasil: ")  + String(status_ruang));
+        
+        sprintf((char*)tmp, HTTP_RUANG, cardid, status_ruang);
+        //Serial.println(tmp);
+        Serial.println(httpGETRequest(tmp));
+        const char* lokasi = httpGETLokasi();
+        lv_label_set_text(guider_ui.screen_menu_patroli_label_lokasi_patroli, lokasi);
       }
+    }
     irqPrev = irqCurr;
   }
 }

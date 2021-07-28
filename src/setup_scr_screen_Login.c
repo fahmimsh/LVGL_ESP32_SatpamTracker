@@ -244,7 +244,7 @@ void setup_scr_screen_Login(lv_ui *ui){
 
 	//Write codes screen_Login_bat_status
 	ui->screen_Login_bat_status = lv_label_create(ui->screen_Login, NULL);
-	lv_label_set_text(ui->screen_Login_bat_status, "0%");
+	lv_label_set_text(ui->screen_Login_bat_status, "%");
 	lv_label_set_long_mode(ui->screen_Login_bat_status, LV_LABEL_LONG_BREAK);
 	lv_label_set_align(ui->screen_Login_bat_status, LV_LABEL_ALIGN_LEFT);
 
@@ -267,11 +267,11 @@ void setup_scr_screen_Login(lv_ui *ui){
 	lv_style_set_pad_bottom(&style_screen_Login_bat_status_main, LV_STATE_DEFAULT, 0);
 	lv_obj_add_style(ui->screen_Login_bat_status, LV_LABEL_PART_MAIN, &style_screen_Login_bat_status_main);
 	lv_obj_set_pos(ui->screen_Login_bat_status, 381, 6);
-	lv_obj_set_size(ui->screen_Login_bat_status, 51, 0);
+	lv_obj_set_size(ui->screen_Login_bat_status, 100, 0);
 
 	//Write codes screen_Login_label_tanggal
 	ui->screen_Login_label_tanggal = lv_label_create(ui->screen_Login, NULL);
-	lv_label_set_text(ui->screen_Login_label_tanggal, "12 Juni 2021");
+	lv_label_set_text(ui->screen_Login_label_tanggal, "");
 	lv_label_set_long_mode(ui->screen_Login_label_tanggal, LV_LABEL_LONG_BREAK);
 	lv_label_set_align(ui->screen_Login_label_tanggal, LV_LABEL_ALIGN_LEFT);
 
@@ -298,7 +298,7 @@ void setup_scr_screen_Login(lv_ui *ui){
 
 	//Write codes screen_Login_label_jam
 	ui->screen_Login_label_jam = lv_label_create(ui->screen_Login, NULL);
-	lv_label_set_text(ui->screen_Login_label_jam, "18:06");
+	lv_label_set_text(ui->screen_Login_label_jam, "");
 	lv_label_set_long_mode(ui->screen_Login_label_jam, LV_LABEL_LONG_BREAK);
 	lv_label_set_align(ui->screen_Login_label_jam, LV_LABEL_ALIGN_CENTER);
 

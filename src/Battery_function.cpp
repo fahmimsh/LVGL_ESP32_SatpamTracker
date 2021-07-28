@@ -1,6 +1,16 @@
 #include <Battery_function.h>
+//#include <FahmiKalmanFilter.h>
 
 extern uint8_t stateScreen;
+
+ /*FahmiKalmanFilter(e_mea, e_est, q);
+    e_mea: Measurement Uncertainty 
+    e_est: Estimation Uncertainty 
+    q: Process Noise */
+
+//FahmiKalmanFilter Kalman_filter(2, 2, 0.01);
+//serial output refresh time pada ambildata
+const long SERIAL_REFRESH_TIME = 100;
 
 float map(float x, float in_min, float in_max, float out_min, float out_max){
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
@@ -11,10 +21,12 @@ uint8_t batteryLevel(){
   uint16_t analogInput = analogRead(BATTERY_PIN);
 
   float voltageInput = ((float)analogInput / 4096.0) * 3.3;
-
   //float voltageReal = (voltageInput) / (R2_BATTERY * (R1_BATTERY + R1_BATTERY));
   float voltageReal = map(voltageInput, 0.0, 3.3, 3.7, 4.2);
+
   voltageReal = constrain(voltageReal, 3.7, 4.2);
+//   float voltageRealkalman = Kalman_filter.updateEstimate(voltageReal);
+//   voltageRealkalman = (voltageRealkalman) / (R2_BATTERY * (R1_BATTERY + R1_BATTERY));
   float percentageBattery = map(voltageReal, 3.7, 4.2, 0.0, 100.0);
 
   return (uint8_t)percentageBattery;
@@ -66,6 +78,5 @@ void TaskBattery(lv_task_t* task){
         lv_label_set_text(guider_ui.screen_set_wifi_bat_status, strBuffer);
         lv_bar_set_value(guider_ui.screen_set_wifi_bar_1, BatteryPercent, LV_ANIM_OFF);
         break;
-
     }
 }

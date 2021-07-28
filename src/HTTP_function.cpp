@@ -40,9 +40,14 @@ const char* httpGETLokasi(){
   sprintf(url, HTTP_TUGAS, satpam.nip_satpam);
   payload = httpGETRequest(url);
 
-  Serial.println(payload);
+  //Serial.println(payload);
+  
+  deserializeJson(doc, payload);
+  const char* strLokasi = doc["lokasi"];
 
-  return payload;
+  Serial.println(strLokasi);
+
+  return strLokasi;
 }
 
 void getLokasi(Lokasi_t *lokasi){
