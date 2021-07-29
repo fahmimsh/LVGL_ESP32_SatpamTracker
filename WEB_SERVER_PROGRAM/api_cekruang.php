@@ -9,9 +9,9 @@ if ($conn->connect_error) {
 
 if(is_array($_GET) && count($_GET) > 0 ) {
 	$rfid = $_GET['rfid'];
-    $nip = $_GET['nip'];
+    $status = $_GET['status'];
 
-    $sql = "SELECT `ruang`,`satpam` FROM `data_tugas_new` WHERE nip = $nip";
+    $sql = "SELECT `ruang`,`satpam` FROM `data_tugas_new` WHERE rfid = '$rfid' AND status = 0";
     $result = $conn->query($sql);
 
 	//Check whether the query was successful or not
@@ -19,25 +19,34 @@ if(is_array($_GET) && count($_GET) > 0 ) {
         while($row = $result->fetch_array()) {
         $nama_ruang = $row['ruang'];
         $nama_pengecek = $row['satpam'];
-
         }
-    
-        $sql = "INSERT INTO `tugas_selesai`(`nama_ruang`, `pengecek`, `status`) VALUES ('$nama_ruang','$nama_pengecek',1)";
-        $result = $conn->query($sql);
 
-        if ($result){
+        $data = array();
+    
+        $sql = "INSERT INTO `data_masuk`(`ruang`, `status`, `nama_ruang`, `nama_pengecek`) VALUES ('$rfid','$status','$nama_ruang','$nama_pengecek')";
+        $sql2 = "UPDATE `data_tugas_new` SET `status_ruangan`='$status',`status`=1 WHERE ruang = '$nama_ruang'";
+        $result = $conn->query($sql);
+        $result2 = $conn->query($sql2);
+
+        if ($result2){
             $data['status'] = "data masuk";
+            echo (json_encode($data));
         }
         else{
             $data['status'] = 'tidak masuk ->'.mysqli_error( $conn);
+            echo (json_encode($data));
         }
 
     }
     else{
-        $data['status'] = "Tugas";
+        $data['status'] = "sudah dicek";
+        echo (json_encode($data));
         }
 
 
 
 
+}
+else {
+    echo('{"input error"}');
 }

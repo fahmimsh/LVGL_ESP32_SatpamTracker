@@ -15,11 +15,13 @@ if(is_array($_GET) && count($_GET) > 0 ) {
 
     $sql = "SELECT `nip`, `nama`, `posisi` FROM `data_satpam_new` WHERE rfid = $rfid";
     $result = $conn->query($sql);
+    $data['rfid'] = $rfid;
 
 	//Check whether the query was successful or not
     if ($result->num_rows > 0) {
         while($row = $result->fetch_array()) {
         // output data of each row
+        $data['absen'] = '1';
         $data['nip'] = $row['nip'];
         $data['nama'] = $row['nama'];
         $nip = $row['nip'];
@@ -32,15 +34,17 @@ if(is_array($_GET) && count($_GET) > 0 ) {
     $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
-        $data['status'] = 'tidak masuk -> Sudah Absen';
+        $data['status'] = 'X';
     }
     else{
         
         $sql1 = "INSERT INTO `data_presensi`(`u_id`, `nama`, `posisi`) VALUES ('$nip','$nama','$posisi')";
         $result1 = $conn->query($sql1);
         if ($result1) {
-            $data['status'] = 'tercatat';
+            $data['absen'] = '1';
+            $data['status'] = 'Y';
         }else{
+            $data['absen'] = '0';
             $data['status'] = 'tidak masuk ->'.mysqli_error( $conn);
         }
     }

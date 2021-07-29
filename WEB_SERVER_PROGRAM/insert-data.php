@@ -123,8 +123,8 @@ function get_lantai($ruanganq){
       // output data of each row
       while($row = mysqli_fetch_array($result)) {
        return $row['lantai'];
-    }
-  }
+        
+    }}
 
 }
 function get_pengecek($uuid){

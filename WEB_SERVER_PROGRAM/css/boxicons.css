@@ -56,7 +56,6 @@
     {
         -webkit-transform: rotate(0);
                 transform: rotate(0);
-        -webkit-line-clamp: 5;
     }
     100%
     {
@@ -1288,12 +1287,6 @@
 }
 .bx-caret-left-square:before {
   content: "\e9fe";
-  position: absolute;
-  width: 949px;
-  height: 768px;
-  left: 907px;
-  top: 216px;
-
 }
 .bx-caret-right:before {
   content: "\e9ff";
@@ -1315,11 +1308,6 @@
 }
 .bx-carousel:before {
   content: "\ea05";
-  position: absolute;
-  width: 1260px;
-  height: 768px;
-  left: 445px;
-  top: 218px;
 }
 .bx-cart:before {
   content: "\ea06";
@@ -1998,8 +1986,6 @@
 }
 .bx-image:before {
   content: "\eae7";
-  max-width: 100%;
-  height: auto;
 }
 .bx-image-add:before {
   content: "\eae8";

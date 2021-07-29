@@ -18,11 +18,38 @@
   });
   
   $(document).ready(function() {
-    $('#dataTable').DataTable();
+    $('#dataTable').DataTable({ defaultDate: new Date() });
   });
 
   $(document).ready(function() {
-    $('#dataTablex').DataTable();
+    $('#dataTablex').DataTable({ defaultDate: new Date() });
   });
+  $(document).ready(function() {
+    $('#dataTablexz').DataTable();
+  });
+  $(document).ready(function() {
+    $('#dataTablexzz').DataTable();
+  });
+
+  $(document).ready(function () {
+    $(".test").click(function () {
+        $("#thedialog").attr('src', $(this).attr("href"));
+        $("#somediv").dialog({
+            width: 400,
+            height: 450,
+            modal: true,
+            close: function () {
+                $("#thedialog").attr('src', "about:blank");
+            }
+        });
+        return false;
+    });
+});
+
+$( "#target" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+
+$(".chosen-select").chosen( { width: '100%', height: '50px' });
 
 })(jQuery);

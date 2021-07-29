@@ -20,37 +20,59 @@
         $("body").toggleClass("sb-sidenav-toggled");
     });
 
-    var minDate;
-    var maxDate = new Date();
-    var firstTime = true;
+    var minDate, maxDate, shif;
  
     // Custom filtering function which will search data in column four between two values
     $.fn.dataTable.ext.search.push(
         function( settings, data, dataIndex ) {
             var max = maxDate.val();
-            var maxDatex;
-            if (firstTime == true){
-                maxDatex = new Date(Date.now());
-                maxDatex.setHours(0, 0, 0, 0);
+            var shiff = shif.val();
+            var maxDatex = new Date( max );
+            maxDatex.setHours(0, 0, 0, 0);
+            var date = new Date( data[3] );
+            var minnn = maxDatex,mannn = maxDatex;
+            var jam = new Date( data[3] );
+            var jambu;
+            console.log(data[3]);
+            console.log(shiff);
+            console.log(date);
+            console.log(maxDatex);
+            date.setHours(0, 0, 0, 0);
+            if(shiff == 0){
+                minnn.setHours(0, 0, 0, 0);
+                mannn.setHours(23, 59, 0, 0);
+
+            }
+            if(shiff == 1){
+                minnn.setHours(6, 0, 0, 0);
+                mannn.setHours(8, 0, 0, 0);
+            }
+            if(shiff == 2){
+                minnn.setHours(13, 0, 0, 0);
+                mannn.setHours(14, 0, 0, 0);
+            }
+            if(shiff == 3){
+                minnn.setHours(16, 0, 0, 0);
+                mannn.setHours(17, 0, 0, 0);
+            }
+            if(shiff == 4){
+                minnn.setHours(23, 0, 0, 0);
+                mannn.setHours(23, 59, 0, 0);
+            }
+            if(jam > minnn && jam < mannn){
+                jambu = true;
+                console.log(jambu);
+
             }
             else{
-                maxDatex = new Date( max );
-                maxDatex.setHours(0, 0, 0, 0);
+                jambu = false;
+                console.log("jam = " + minnn)
+                console.log("Jambu = " + jambu);
             }
-            // maxDatex = new Date( max );
-            // maxDatex.setHours(0, 0, 0, 0);
-            var date = new Date( data[5] );
-            date.setHours(0, 0, 0, 0);
-            console.log(data[5]);
-            console.log(date);
-            date.setHours(0, 0, 0, 0);
-            console.log(maxDatex);
-            console.log("done");
-            date.setHours(0, 0, 0, 0);
             const diffInMs = Math.abs(maxDatex - date);
      
             if (
-                diffInMs == 0 
+                diffInMs == 0 && jambu == true
             ) {
                 console.log('muncul');
                 return true;
@@ -62,27 +84,29 @@
         }
     );
 
-    $("div.id_100 select").val("val2").change();
+    
      
     $(document).ready(function() {
         // Create date inputs
-        
         maxDate = new DateTime($('#max')  , {
+            defaultDate: new Date(),
             format: 'MMMM Do YYYY',
             
         });
 
-        var table2 =  $('#dataTable').DataTable();
+        shif = $('#maxxx');
 
+
+
+        var table2 =  $('#dataTable').DataTable();
      
         // DataTables initialisation
         var table = $('#tabel-dataa').DataTable();
-
      
         // Refilter the table
         $('#max').on('change', function () {
-            firstTime = false;
             table.draw();
+            console.log(shif.val());
         });
 
        
@@ -127,11 +151,5 @@ $( "#target" ).click(function() {
   });
     
   $(".chosen-select").chosen( { width: '100%', height: '50px' });
-
-  $(document).ready(function(){
-    $("#aaaaaa").click(function(){
-      $("#BBBBBB").modal();
-    });
-  });
 
 })(jQuery);

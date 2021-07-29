@@ -47,10 +47,12 @@ void TaskBattery(lv_task_t* task){
 
     switch(stateScreen){
         case STATE_SCREEN_HISTORY:
+        Serial.println("Tampilan History");
         lv_label_set_text(guider_ui.screen_history_bat_status, strBuffer);
         lv_bar_set_value(guider_ui.screen_history_bar_1, BatteryPercent, LV_ANIM_OFF);
         break;
         case STATE_SCREEN_LOGIN:
+        Serial.println("Login screen");
         lv_label_set_text(guider_ui.screen_Login_bat_status, strBuffer);
         lv_bar_set_value(guider_ui.screen_Login_bar_1, BatteryPercent, LV_ANIM_OFF);
         break;
@@ -59,22 +61,27 @@ void TaskBattery(lv_task_t* task){
         lv_bar_set_value(guider_ui.screen_Menu_bar_1, BatteryPercent, LV_ANIM_OFF);
         break;
         case STATE_SCREEN_PATROLI:
+        Serial.println("Menu patroli");
         lv_label_set_text(guider_ui.screen_menu_patroli_bat_status, strBuffer);
         lv_bar_set_value(guider_ui.screen_menu_patroli_bar_1, BatteryPercent, LV_ANIM_OFF);
         break;
         case STATE_SCREEN_RUANGAN:
+        Serial.println("List Ruangan");
         lv_label_set_text(guider_ui.screen_menu_ruangan_bat_status, strBuffer);
         lv_bar_set_value(guider_ui.screen_menu_ruangan_bar_1, BatteryPercent, LV_ANIM_OFF);
         break;
         case STATE_SCREEN_SCANID:
+        Serial.println("Scan ID card");
         lv_label_set_text(guider_ui.screen_set_scanid_bat_status, strBuffer);
         lv_bar_set_value(guider_ui.screen_set_scanid_bar_1, BatteryPercent, LV_ANIM_OFF);
         break;
         case STATE_SCREEN_SETTING:
+        Serial.println("Setting");
         lv_label_set_text(guider_ui.screen_menu_setting_bat_status, strBuffer);
         lv_bar_set_value(guider_ui.screen_menu_setting_bar_1, BatteryPercent, LV_ANIM_OFF);
         break;
         case STATE_SCREEN_WIFI:
+        Serial.println("Wifi");
         lv_label_set_text(guider_ui.screen_set_wifi_bat_status, strBuffer);
         lv_bar_set_value(guider_ui.screen_set_wifi_bar_1, BatteryPercent, LV_ANIM_OFF);
         break;
