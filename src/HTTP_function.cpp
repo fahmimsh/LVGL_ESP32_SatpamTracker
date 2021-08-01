@@ -44,24 +44,38 @@ const char* httpGETLokasi(){
   
   deserializeJson(doc, payload);
   const char* strLokasi = doc["lokasi"];
-
   Serial.println(strLokasi);
 
   return strLokasi;
 }
 
-void getLokasi(Lokasi_t *lokasi){
-  const char* payload = httpGETLokasi();
-
+uint16_t httpGETHistory(Lokasi_t *lokasi){
+  char url[255];
+  sprintf(url, HTTP_SUMMARY, satpam.nip_satpam);
+  const char* payload = httpGETRequest(url);
+  Serial.println(payload);
   deserializeJson(doc, payload);
+
+  uint16_t sz = doc.size();
+  
+  for(int i = 0; i < doc.size(); i++){
+    lokasi[i].nama_lokasi = doc[i]["Lokasi"];
+    Serial.println(String("Lokasi: ") + String(lokasi[i].nama_lokasi));
+    lokasi[i].status = doc[i]["Status"];
+    Serial.println(String("Status: ") + String(lokasi[i].status));
+  }
+
+  return sz;
+
+
   //JsonArray arrayLokasi = doc.to<JsonArray>();
 
-  JsonArray arrayLokasi = doc["lokasi"];
+  /*JsonArray arrayLokasi = doc[];
 
   int i = 0;
 
   for(JsonVariant v : arrayLokasi){
     lokasi[i].nama_lokasi =  v.as<const char*>();
     i++;
-  }
+  }*/
 }

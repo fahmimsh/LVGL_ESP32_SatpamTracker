@@ -8,6 +8,7 @@
 #include "generated/gui_guider.h"
 #include "generated/events_init.h"
 #include "custom/custom.h"
+#include <HTTP_function.h>
 
 extern uint8_t stateScreen;
 extern bool buzzerON;
@@ -164,7 +165,7 @@ void setup_scr_screen_history(lv_ui *ui){
 
 	//Write codes screen_history_bat_status
 	ui->screen_history_bat_status = lv_label_create(ui->screen_history, NULL);
-	lv_label_set_text(ui->screen_history_bat_status, "%");
+	lv_label_set_text(ui->screen_history_bat_status, "0%");
 	lv_label_set_long_mode(ui->screen_history_bat_status, LV_LABEL_LONG_BREAK);
 	lv_label_set_align(ui->screen_history_bat_status, LV_LABEL_ALIGN_LEFT);
 
@@ -187,11 +188,11 @@ void setup_scr_screen_history(lv_ui *ui){
 	lv_style_set_pad_bottom(&style_screen_history_bat_status_main, LV_STATE_DEFAULT, 0);
 	lv_obj_add_style(ui->screen_history_bat_status, LV_LABEL_PART_MAIN, &style_screen_history_bat_status_main);
 	lv_obj_set_pos(ui->screen_history_bat_status, 381, 6);
-	lv_obj_set_size(ui->screen_history_bat_status, 100, 0);
+	lv_obj_set_size(ui->screen_history_bat_status, 51, 0);
 
 	//Write codes screen_history_label_tanggal
 	ui->screen_history_label_tanggal = lv_label_create(ui->screen_history, NULL);
-	lv_label_set_text(ui->screen_history_label_tanggal, "");
+	lv_label_set_text(ui->screen_history_label_tanggal, "12 Juni 2021");
 	lv_label_set_long_mode(ui->screen_history_label_tanggal, LV_LABEL_LONG_BREAK);
 	lv_label_set_align(ui->screen_history_label_tanggal, LV_LABEL_ALIGN_LEFT);
 
@@ -218,7 +219,7 @@ void setup_scr_screen_history(lv_ui *ui){
 
 	//Write codes screen_history_label_jam
 	ui->screen_history_label_jam = lv_label_create(ui->screen_history, NULL);
-	lv_label_set_text(ui->screen_history_label_jam, "");
+	lv_label_set_text(ui->screen_history_label_jam, "18:06");
 	lv_label_set_long_mode(ui->screen_history_label_jam, LV_LABEL_LONG_BREAK);
 	lv_label_set_align(ui->screen_history_label_jam, LV_LABEL_ALIGN_CENTER);
 
@@ -242,6 +243,9 @@ void setup_scr_screen_history(lv_ui *ui){
 	lv_obj_add_style(ui->screen_history_label_jam, LV_LABEL_PART_MAIN, &style_screen_history_label_jam_main);
 	lv_obj_set_pos(ui->screen_history_label_jam, 157, 4);
 	lv_obj_set_size(ui->screen_history_label_jam, 130, 0);
+
+	Lokasi_t listLokasi[10];
+	uint16_t sizeLokasi = httpGETHistory(listLokasi);
 
 	//Write codes screen_history_table_history
 	ui->screen_history_table_history = lv_table_create(ui->screen_history, NULL);
@@ -274,15 +278,24 @@ void setup_scr_screen_history(lv_ui *ui){
 	lv_style_set_border_width(&style_screen_history_table_history_cell1, LV_STATE_DEFAULT, 1);
 	lv_obj_add_style(ui->screen_history_table_history, LV_TABLE_PART_CELL1, &style_screen_history_table_history_cell1);
 	lv_obj_set_pos(ui->screen_history_table_history, 60, 42);
-	lv_table_set_col_cnt(ui->screen_history_table_history,3);
-	lv_table_set_row_cnt(ui->screen_history_table_history,6);
+	lv_table_set_col_cnt(ui->screen_history_table_history, 3);
+	lv_table_set_row_cnt(ui->screen_history_table_history, 6);
+
 	lv_table_set_cell_value(ui->screen_history_table_history,0,0,"Lokasi");
-	lv_table_set_cell_value(ui->screen_history_table_history,1,0,"HH105");
+	for(int i = 1; i <= sizeLokasi; i++){
+		lv_table_set_cell_value(ui->screen_history_table_history, i, 0, listLokasi[i - 1].nama_lokasi);
+	}
+
+	lv_table_set_cell_value(ui->screen_history_table_history,0,1,"Status Lokasi");
+	for(int i = 1; i <= sizeLokasi; i++){
+		lv_table_set_cell_value(ui->screen_history_table_history, i, 1, listLokasi[i - 1].status);
+	}
+
+	/*lv_table_set_cell_value(ui->screen_history_table_history,1,0,"HH105");
 	lv_table_set_cell_value(ui->screen_history_table_history,2,0,"JJ105");
 	lv_table_set_cell_value(ui->screen_history_table_history,3,0,"Citron");
 	lv_table_set_cell_value(ui->screen_history_table_history,4,0,"a");
 	lv_table_set_cell_value(ui->screen_history_table_history,5,0,"b");
-	lv_table_set_cell_value(ui->screen_history_table_history,0,1,"Status Lokasi");
 	lv_table_set_cell_value(ui->screen_history_table_history,1,1,"Tidak Masalah");
 	lv_table_set_cell_value(ui->screen_history_table_history,2,1,"Tidak Masalah");
 	lv_table_set_cell_value(ui->screen_history_table_history,3,1,"$3");
@@ -293,7 +306,7 @@ void setup_scr_screen_history(lv_ui *ui){
 	lv_table_set_cell_value(ui->screen_history_table_history,2,2,"08:15");
 	lv_table_set_cell_value(ui->screen_history_table_history,3,2," ");
 	lv_table_set_cell_value(ui->screen_history_table_history,4,2,"");
-	lv_table_set_cell_value(ui->screen_history_table_history,5,2,"");
+	lv_table_set_cell_value(ui->screen_history_table_history,5,2,"");*/
 	lv_obj_set_style_local_pad_left(ui->screen_history_table_history, LV_TABLE_PART_CELL1, LV_STATE_DEFAULT, 10);
 	lv_obj_set_style_local_pad_right(ui->screen_history_table_history, LV_TABLE_PART_CELL1, LV_STATE_DEFAULT, 10);
 	lv_obj_set_style_local_pad_top(ui->screen_history_table_history, LV_TABLE_PART_CELL1, LV_STATE_DEFAULT, 10);

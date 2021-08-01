@@ -393,7 +393,7 @@ void setup_scr_screen_Login(lv_ui *ui){
 	lv_style_set_pad_top(&style_screen_Login_label_nama_satpam_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_bottom(&style_screen_Login_label_nama_satpam_main, LV_STATE_DEFAULT, 0);
 	lv_obj_add_style(ui->screen_Login_label_nama_satpam, LV_LABEL_PART_MAIN, &style_screen_Login_label_nama_satpam_main);
-	lv_obj_set_pos(ui->screen_Login_label_nama_satpam, 236, 113);
+	lv_obj_set_pos(ui->screen_Login_label_nama_satpam, 236, 128);
 	lv_obj_set_size(ui->screen_Login_label_nama_satpam, 190, 0);
 
 	//Write codes screen_Login_label_nip
@@ -447,7 +447,7 @@ void setup_scr_screen_Login(lv_ui *ui){
 	lv_style_set_pad_top(&style_screen_Login_label_1_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_bottom(&style_screen_Login_label_1_main, LV_STATE_DEFAULT, 0);
 	lv_obj_add_style(ui->screen_Login_label_1, LV_LABEL_PART_MAIN, &style_screen_Login_label_1_main);
-	lv_obj_set_pos(ui->screen_Login_label_1, 236, 204);
+	lv_obj_set_pos(ui->screen_Login_label_1, 236, 219);
 	lv_obj_set_size(ui->screen_Login_label_1, 196, 0);
 
 	stateScreen = STATE_SCREEN_LOGIN;

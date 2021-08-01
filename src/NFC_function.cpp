@@ -17,7 +17,7 @@ static uint32_t cardid;
 static uint8_t strBuffer[32];
 
 extern DynamicJsonDocument doc;
-
+extern bool buzzerON;
 void handleCardDetected() {
     uint8_t success = false;
     uint8_t uid[] = { 0, 0, 0, 0, 0, 0, 0 };  // Buffer to store the returned UID
@@ -95,6 +95,7 @@ void loop_nfc(){
       Serial.println("Got NFC IRQ");  
       handleCardDetected();
       getTime();
+      buzzerON = true;
 	   if(stateScreen == STATE_SCREEN_LOGIN) {
           char tmp[100];
           sprintf((char*)tmp, HTTP_ABSEN, cardid);
